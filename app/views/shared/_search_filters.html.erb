@@ -1,0 +1,97 @@
+<div class="hide-desktop filters-mobile-dropdown">
+  <a class="flex-grow-1" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
+    Filters
+  </a>
+  <%= link_to root_path, class: "clear-filters" do %>
+    Clear All
+  <% end %>
+</div>
+<div class="collapse" id="collapseFilters">
+  <div class="card card-body">
+    <div class="container-filters bg-white">
+      <!-- select one (or several) categories tag among all activities available at this location-->
+      <div class="filters">
+
+        <% if params[:category] %>
+          <%= link_to root_path(request.query_parameters.except(:category)), class: "btn filter filter-selected" do %>
+            <%= @products.find_by(category: params[:category]).category.name %> <i class="fas fa-times"></i>
+          <% end %>
+        <% else %>
+          <div class="filter activity-filters dropdown">
+            <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </button>
+            <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
+              <% categories = [] %>
+              <% @products.each do |product| %>
+                <% categories << product.category %>
+              <% end %>
+              <% categories.uniq.each do |category| %>
+                <% request.query_parameters[:category] = category %>
+                <%= link_to root_path(request.query_parameters), class: "dropdown-item" do %>
+                  <%= category.name %>
+                <% end %>
+                <% request.query_parameters.except!(:category) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <!-- FILTER BY GENRE -->
+        <% if params[:genre] %>
+          <%= link_to root_path(request.query_parameters.except(:genre)), class: "btn filter filter-selected" do %>
+            <%= @products.find_by(genre: params[:genre]).genre.name %> <i class="fas fa-times"></i>
+          <% end %>
+        <% else %>
+          <div class="filter activity-filters dropdown">
+            <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Genre
+            </button>
+            <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
+              <% genres = [] %>
+              <% @products.each do |product| %>
+                <% genres << product.genre %>
+              <% end %>
+              <% genres.uniq.each do |genre| %>
+                <% request.query_parameters[:genre] = genre %>
+                <%= link_to root_path(request.query_parameters), class: "dropdown-item" do %>
+                  <%= genre.name %>
+                <% end %>
+                <% request.query_parameters.except!(:genre) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <!-- FILTER BY SIZE -->
+        <% if params[:size] %>
+          <%= link_to root_path(request.query_parameters.except(:size)), class: "btn filter filter-selected" do %>
+            <%= @products.find_by(size: params[:size]).size.name %>mois <i class="fas fa-times"></i>
+          <% end %>
+        <% else %>
+          <div class="filter activity-filters dropdown">
+            <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Taille
+            </button>
+            <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
+              <% sizes = [] %>
+              <% @products.each do |product| %>
+                <% sizes << product.size %>
+              <% end %>
+              <% sizes.uniq.each do |size| %>
+                <% request.query_parameters[:size] = size %>
+                <%= link_to root_path(request.query_parameters), class: "dropdown-item" do %>
+                  <%= size.name %>mois
+                <% end %>
+                <% request.query_parameters.except!(:size) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <%= link_to root_path, class: "clear-filters hide-tablet" do %>
+        Clear All Filters
+      <% end %>
+
+    </div>
+  </div>
+</div>

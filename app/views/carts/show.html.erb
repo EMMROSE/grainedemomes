@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 100px;">
+  <% if @line_items.empty? %>
+      <%= link_to products_path do %>
+        <button>Dressing</button>
+      <% end %>
+  <% else %>
+    <div>
+      <h2 style="text-decoration: underline;"><%= "Mon panier :"%></h2><br>
+      <div class="cart-items">
+        <% @line_items.each do |line_item| %>
+          <div class="cart-item">
+            <%= cl_image_tag line_item.product.cover.key%>
+            <%= line_item.product.name %>
+            <p>: </p>
+            <p><%= (line_item.total_price) %> €</p>
+            <%= link_to line_item_path(line_item), method: :delete do%>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          </div>
+          <br>
+        <% end %>
+      </div>
+      <div class="total-amount">
+        <div style="display:flex;">
+          <h4>Total de ma commande :</h4>
+          <h4>  <%= (@cart.sub_total) %> €</h4>
+        </div>
+          <%= link_to order_path do %>
+            <button>Commander</button>
+          <% end %>
+      </div>
+      <br>
+      <div style="display:flex; flex-direction: row;">
+        <%= link_to cart_path, method: :delete, data: {confirm: 'are_you_sure?'} do %>
+          <i class="fas fa-trash" style="color: red;"></i>
+        <% end %>
+        <p style="color: red;"> Videz le panier</p>
+      </div>
+  <% end %>
+</div>

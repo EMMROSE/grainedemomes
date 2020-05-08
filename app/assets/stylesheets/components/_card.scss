@@ -1,0 +1,123 @@
+// GRID display
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+// Product card
+.wrapper {
+  width: 300px;
+  height: 420px;
+  background: white;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover {
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+  }
+}
+
+
+.top {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .front-picture {
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0;
+    }
+  }
+  .back-picture {
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.bottom {
+  padding: 0px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  text-decoration: none;
+  #icone {
+    font-size: 24px;
+    color: grey;
+    position: absolute;
+    bottom: 32px; right: 10px;
+  }
+  a  {
+    color: grey;
+    &:hover {color: grey; text-decoration: none;}
+    position: absolute;
+    bottom: 20px; right: 10px;
+  }
+}
+
+// CARD FOR Gift( Carte cadeau)
+
+.gift-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 32px;
+}
+.gift-card {
+  padding:  24px;
+  height: 320px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0;
+  transition: box-shadow 0.3s;
+  &:hover {box-shadow: 0px 0px 30px rgba(0,0,0,0.6);}
+  a  {
+    color: grey;
+    &:hover {color: grey; text-decoration: none;}
+  }
+}
+.gift-card-border {
+  border-right: 1px solid #000;
+}
+
+.title_formule {
+    display: block;
+    font-size: 30px;
+    margin: 20px 0 30px 0;
+    line-height: normal;
+    position: relative;
+}
+
+.title_formule::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+  height: 1px;
+  top: 50px;
+  background-color: #000;
+}

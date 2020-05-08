@@ -1,0 +1,35 @@
+<div class= "container" style="margin-top: 100px;">
+  <div class= "product">
+    <%= cl_image_tag @product.cover.key %>
+    <%= cl_image_tag @product.cover.key %>
+    <div class= "product-description">
+      <div class= "description">
+        <h1 class="text-truncate"><%= @product.name %></h1>
+        <h3><%= @product.description %></h3>
+      </div>
+      <div class= "price">
+        <h3 style="text-decoration: line-through;"><%= @product.old_price%>€</h3>
+        <h3><%= @product.price%>€</h3>
+        <%= link_to "Ajoutez à votre panier", line_items_path(product_id: @product.id), method: :post, class: "btn btn-primary" %>
+      </div>
+      <div>
+        <% if user_signed_in? %>
+          <br>
+          <ul>
+            <%= link_to edit_product_path(@product), class: "py-2 px-4 ml-2 bd-highlight bg-light rounded" do %>
+              <i class="fas fa-pencil-alt"></i> Edit
+            <% end %>
+            <%= link_to product_path(@product), method: :delete, class: "py-2 px-4 ml-2 bd-highlight bg-light rounded",data: { confirm: "Etes vous sûre ?" } do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <%= link_to root_path do %>
+      <button>Dressing</button>
+    <% end %>
+  </div>
+</div>
