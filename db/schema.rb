@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 2020_05_08_134632) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "gifts", force: :cascade do |t|
+    t.string "name"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "EUR", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "line_items", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "cart_id"
@@ -69,6 +77,10 @@ ActiveRecord::Schema.define(version: 2020_05_08_134632) do
   create_table "orders", force: :cascade do |t|
     t.string "status"
     t.string "email"
+    t.string "fullname"
+    t.string "address"
+    t.string "zipcode"
+    t.string "city"
     t.string "checkout_session_id"
     t.integer "amount_cents", default: 0, null: false
     t.string "amount_currency", default: "EUR", null: false

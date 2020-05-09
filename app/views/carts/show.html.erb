@@ -25,7 +25,7 @@
           <h4>Total de ma commande :</h4>
           <h4>  <%= (@cart.sub_total) %> €</h4>
         </div>
-          <%= link_to order_path do %>
+          <%= link_to new_order_path do %>
             <button>Commander</button>
           <% end %>
       </div>

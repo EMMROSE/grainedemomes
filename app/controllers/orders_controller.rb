@@ -12,8 +12,13 @@ class OrdersController < ApplicationController
     @order.amount = @current_cart.sub_total
     @order.user = current_user if current_user
     if @order.save
-      save_user_address if params[:save_address].to_i == 1
-      trigger_stripe
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        line_items: stripe_line_items(@order.line_items),
+        success_url: order_url(order),
+        cancel_url: order_url(order)
+      )
+      order.update(checkout_session_id: session.id)
       cleanup_cart
       redirect_to new_order_payment_path(@order)
     else
@@ -23,11 +28,11 @@ class OrdersController < ApplicationController
   end
 
   def show
-    # if current_user
-    #   @order = current_user.orders.find(params[:id])
-    # else
-    @order = Order.find(params[:id])
-    # end
+    if current_user
+      @order = current_user.orders.find(params[:id])
+    else
+      @order = Order.find(params[:id])
+    end
   end
 
   def index
@@ -41,19 +46,19 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:email, :address, :zip_code, :city)
+    params.require(:order).permit(:fullname, :email, :address, :zipcode, :city)
   end
 
-  def trigger_stripe
-    stripe_session = Stripe::Checkout::Session.create(
-      payment_method_types: ['card'],
-      customer_email: customer_email,
-      line_items: stripe_line_items(@order.line_items),
-      success_url: order_url(@order),
-      cancel_url: order_url(@order)
-    )
-    @order.update(checkout_session_id: stripe_session.id)
-  end
+  # def trigger_stripe
+  #   stripe_session = Stripe::Checkout::Session.create(
+  #     payment_method_types: ['card'],
+  #     customer_email: customer_email,
+  #     line_items: stripe_line_items(@order.line_items),
+  #     success_url: order_url(@order),
+  #     cancel_url: order_url(@order)
+  #   )
+  #   @order.update(checkout_session_id: stripe_session.id)
+  # end
 
   def cleanup_cart
     @current_cart.line_items.each { |item| item.update(cart_id: nil) }
@@ -67,7 +72,7 @@ class OrdersController < ApplicationController
       item_hash = {
         name: item.product.name,
         amount: item.product.price_cents,
-        quantity: item.quantity,
+        quantity: 1,
         currency: 'eur'
       }
       all_items.push(item_hash)
