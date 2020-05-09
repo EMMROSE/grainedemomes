@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :cadeau ]
+  skip_before_action :authenticate_user!, only: :home
 
   def home
     @categories = Category.all
@@ -14,7 +14,5 @@ class PagesController < ApplicationController
     @products = @products.where(size: params[:size]) if params[:size].present?
   end
 
-  def cadeau
-  end
 
 end
