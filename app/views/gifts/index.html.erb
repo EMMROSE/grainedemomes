@@ -1,0 +1,33 @@
+<!-- INDEX FOR GIFT -->
+<div class="container" style="margin-top: 100px;">
+  <div>
+    <h3>Faites votre cadeau maintenant</h3>
+    <h5>Vous souhaitez offrir un cadeau à quelqu’un qui vous est cher ?</h5>
+    <h5>Une future maman ou de jeunes parents ?</h5>
+
+    <h3>Comment ca marche ?</h3>
+    <ul>
+      <li>1. Enregistrez la somme que vous souhaitez et la personne pourra la soustraire du prix de son abonnement</li>
+      <li>2. Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre chèque cadeau</li>
+      <li>3. Recevez un mail à imprimer adressé à la personne souhaitée avec un code de réduction pour son abonnement</li>
+    </ul>
+  </div>
+  <div class="gift-cards">
+    <div class="gift-card gift-card-border">
+    <% @gifts.each do |gift| %>
+      <p class="title_formule"><%= gift.name %></p><br>
+      <p>pour</p><br>
+      <p><%= gift.price %>€</p>
+      <%= link_to root_path do %>
+        <button>Offrir cette formule</button>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

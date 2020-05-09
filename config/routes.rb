@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get 'cadeau', to: 'pages#cadeau'
 
+  resources :gifts, only: :index
   resources :products
   resources :orders do
     resources :payments, only: :new
