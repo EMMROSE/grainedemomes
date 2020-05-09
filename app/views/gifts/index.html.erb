@@ -13,16 +13,16 @@
     </ul>
   </div>
   <div class="gift-cards">
-    <div class="gift-card gift-card-border">
     <% @gifts.each do |gift| %>
-      <p class="title_formule"><%= gift.name %></p><br>
-      <p>pour</p><br>
-      <p><%= gift.price %>€</p>
-      <%= link_to root_path do %>
-        <button>Offrir cette formule</button>
-      <% end %>
+      <div class="gift-card gift-card-border">
+        <p class="title_formule"><%= gift.name %></p><br>
+        <p>pour</p><br>
+        <p><%= gift.price %>€</p>
+        <%= link_to root_path do %>
+          <button>Offrir cette formule</button>
+        <% end %>
+      </div>
     <% end %>
-    </div>
   </div>
 </div>
 
