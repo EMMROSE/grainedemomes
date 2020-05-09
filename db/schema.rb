@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2020_05_08_134632) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "status"
+    t.string "state"
     t.string "email"
     t.string "fullname"
     t.string "address"
