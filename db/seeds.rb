@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require "open-uri"
 
 puts "Destroy all Categories"
@@ -29,6 +21,8 @@ c6 = Category.create!(name: "Robe")
 c6.save!
 c7 = Category.create!(name: "Veste et Manteaux")
 c7.save!
+puts ">>>>>> #{Category.count} Categories created!"
+puts "----------"
 
 puts "Create Genres"
 Genre.destroy_all
@@ -38,6 +32,7 @@ g2 = Genre.create!(name: "female")
 g2.save!
 g3 = Genre.create!(name: "both")
 g3.save!
+puts ">>>>>> #{Genre.count} Genres created!"
 puts "----------"
 
 puts "Create Sizes"
@@ -54,6 +49,7 @@ s5 = Size.create!(name: "24")
 s5.save!
 s6 = Size.create!(name: "36")
 s6.save!
+puts ">>>>>> #{Size.count} sizes created!"
 puts "----------"
 
 puts "Create Gift"
@@ -68,6 +64,7 @@ gift3.save!
 gift4 = Gift.create!(name: "Formule 5 vêtements pour 2 mois", price_cents: 8900)
 gift4.save!
 puts ">>>>>> Done!"
+puts ">>>>>> #{Gift.count} gifts created!"
 
 puts "Destroy all Products"
 Product.destroy_all
@@ -150,4 +147,3 @@ puts "P8 done"
 puts "-------"
 puts ">>>>>> #{Product.count} products created!"
 puts ">>>>>> Done! Seeds achieved"
-

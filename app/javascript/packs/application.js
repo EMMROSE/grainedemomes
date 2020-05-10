@@ -32,5 +32,5 @@ import { Filters } from '../components/filters';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  Filters();
+
 });
