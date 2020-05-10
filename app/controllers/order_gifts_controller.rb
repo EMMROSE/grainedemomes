@@ -1,13 +1,12 @@
 class OrderGiftsController < ApplicationController
   skip_before_action :authenticate_user!
 
-  # def new
-  #   @order_gift = OrderGift.new
-  #   @gift = Gift.find(params[:gift_id])
-  # end
+  def new
+    @gift = Gift.find(params[:gift_id])
+    @order_gift = OrderGift.new
+  end
 
   def create
-    @gift = Gift.find(params[:gift_id])
     @order_gift = OrderGift.new(order_gift_params)
     @order_gift.amount = @gift.price
     @order_gift.user = current_user if current_user
@@ -49,7 +48,7 @@ class OrderGiftsController < ApplicationController
   private
 
   def order_gift_params
-    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest)
+    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest, :gift_id)
   end
 
 

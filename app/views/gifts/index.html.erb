@@ -18,7 +18,7 @@
         <p class="title_formule"><%= gift.name %></p>
         <p>pour</p>
         <p><%= gift.price %>€</p>
-        <%= link_to order_gifts_path(gift_id: gift.id), method: :post do %>
+        <%= link_to new_order_gift_path(gift) do %>
           <button>Offrir cette formule</button>
         <% end %>
       </div>
