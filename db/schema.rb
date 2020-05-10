@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_134632) do
+ActiveRecord::Schema.define(version: 2020_05_10_134632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,23 @@ ActiveRecord::Schema.define(version: 2020_05_08_134632) do
     t.index ["product_id"], name: "index_line_items_on_product_id"
   end
 
+  create_table "order_gifts", force: :cascade do |t|
+    t.string "state"
+    t.string "email"
+    t.string "fullname"
+    t.string "email_guest"
+    t.string "fullname_guest"
+    t.string "checkout_session_id"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "EUR", null: false
+    t.bigint "user_id"
+    t.bigint "gift_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["gift_id"], name: "index_order_gifts_on_gift_id"
+    t.index ["user_id"], name: "index_order_gifts_on_user_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "state"
     t.string "email"
@@ -135,6 +152,8 @@ ActiveRecord::Schema.define(version: 2020_05_08_134632) do
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
+  add_foreign_key "order_gifts", "gifts"
+  add_foreign_key "order_gifts", "users"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "products", "genres"

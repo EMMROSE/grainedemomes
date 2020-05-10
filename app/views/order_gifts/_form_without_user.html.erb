@@ -1,0 +1,22 @@
+<div class="container">
+  <%= simple_form_for @order_gift do |f| %>
+    <%= f.input :fullname, label: false, placeholder: "votre nom" %>
+    <%= f.input :email, label: false, placeholder: "votre e-mail" %>
+    <%= f.input :fullname_guest, label: false, placeholder: "le nom du bénéficiaire" %>
+    <%= f.input :email_guest, label: false, placeholder: "l'e-mail du bénéficiaire" %>
+   <div>
+    <h2>
+      <%= 'checkout' %>
+    </h2>
+    <div>
+      <span>
+        Total:
+      </span>
+      <span>
+        <p><%= @gift.price %>€</p>
+      </span>
+    </div>
+      <%= f.submit 'payer', class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>

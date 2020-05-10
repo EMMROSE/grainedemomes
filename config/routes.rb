@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  
+
   get 'admin', to: 'pages#admin'
 
 
@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :products
   resources :orders do
     resources :payments, only: :new
+  end
+  resources :order_gifts do
+    resources :payment_gifts, only: :new
   end
   resources :line_items
     post 'line_items/:id/add', to: "line_items#add_quantity", as: "line_item_add"
