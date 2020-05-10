@@ -57,6 +57,7 @@ s6.save!
 puts "----------"
 
 puts "Create Gift"
+Gift.destroy_all
 puts "----------"
 gift1 = Gift.create!(name: "Formule 3 vêtements pour 1 mois", price_cents: 3500)
 gift1.save!
