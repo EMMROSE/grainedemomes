@@ -1,5 +1,4 @@
 .navbar-lewagon {
-  justify-content: space-between;
   background: white;
 }
 
@@ -35,5 +34,11 @@
     font-size: 32px;
     color: black;
     position: relative;
+  }
+}
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar {
+    max-width: 575px !important;
   }
 }

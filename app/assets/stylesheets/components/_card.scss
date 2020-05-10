@@ -74,17 +74,16 @@
 }
 
 // CARD FOR Gift( Carte cadeau)
-
 .gift-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
+
 .gift-card {
-  padding:  24px;
-  height: 320px;
-  width: 320px;
+  padding: 10px;
+  height: 300px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -99,9 +98,6 @@
     &:hover {color: grey; text-decoration: none;}
   }
 }
-.gift-card-border {
-  border-right: 1px solid #000;
-}
 
 .title_formule {
     display: block;
@@ -111,13 +107,44 @@
     position: relative;
 }
 
-.title_formule::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 60px;
-  margin-left: -30px;
-  height: 1px;
-  top: 50px;
-  background-color: #000;
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  // responsive for product cards
+  .wrapper {
+    width: 150px;
+    height: 210px;
+    &:hover {
+      box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    }
+  }
+
+  .bottom {
+    padding: 0px 5px 10px 10px;
+    h3 {font-size: 1rem;}
+    h5 {font-size: 0.75rem;}
+    #icone {
+      font-size: 16px;
+      position: absolute;
+      bottom: 23px; right: 0px;
+    }
+    a  {
+      position: absolute;
+      bottom: 19px; right: 5px;
+    }
+  }
+  .gift-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    margin-left: 16%;
+  }
+  .gift-card {
+    padding: 10px;
+    height: 260px;
+    width: 240px;
+  }
 }
