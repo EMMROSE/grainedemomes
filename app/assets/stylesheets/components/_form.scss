@@ -1,3 +1,10 @@
+.form-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 0px;
+  width: 80%;
+}
+
 .gift-choices {
   display: -webkit-box!important;
   justify-content: space-between;
@@ -8,7 +15,7 @@
 
 .gift-choice {
   flex: 0 0 30%;
-  margin: 5px 0px;
+  margin: 16px;
   text-align: center;
   background-color: #b7b7b7;
   padding: 20px;

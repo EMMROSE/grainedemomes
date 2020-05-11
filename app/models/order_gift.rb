@@ -1,5 +1,5 @@
 class OrderGift < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   belongs_to :gift
 
   validates :email, presence: true

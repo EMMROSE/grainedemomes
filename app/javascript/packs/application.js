@@ -24,12 +24,12 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import { formSportSessions } from '../components/form';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-
+  formSportSessions(); // change activity class when clicked on (on sport session form creation)
 });

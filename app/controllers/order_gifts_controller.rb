@@ -1,25 +1,20 @@
 class OrderGiftsController < ApplicationController
   skip_before_action :authenticate_user!
 
-  # def new
-  #   @gift = Gift.find(params[:gift_id])
-  #   @order_gift = OrderGift.new
-  # end
   def new
-    redirect_to :root
+    @order_gift = OrderGift.new
   end
 
   def create
     @order_gift = OrderGift.new(order_gift_params)
-    @order_gift.gift = Gift.find(params[:gift_id])
     @order_gift.amount =  @order_gift.gift.price
     @order_gift.user = current_user if current_user
     if @order_gift.save
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
         line_items: [{
-          name: @gift.sku,
-          amount: @gift.price_cents,
+          name: @order_gift.gift.name,
+          amount: @order_gift.gift.price_cents,
           currency: 'eur',
           quantity: 1
         }],
@@ -41,9 +36,6 @@ class OrderGiftsController < ApplicationController
     end
   end
 
-  def index
-    @order_gifts = current_user.order_gifts
-  end
 
   def without_login
     session[:without_login] = true
@@ -52,7 +44,7 @@ class OrderGiftsController < ApplicationController
   private
 
   def order_gift_params
-    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest)
+    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest, :gift_id)
   end
 
 

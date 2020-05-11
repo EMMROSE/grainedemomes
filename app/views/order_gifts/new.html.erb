@@ -1,5 +1,41 @@
-<div>
+<!-- NEW FOR ORDER_GIFT -->
+<div class="container" style="margin-top: 100px;">
+  <div class= "gift-text">
+    <h3>Faites votre cadeau maintenant</h3>
+    <h5>Vous souhaitez offrir un cadeau à quelqu’un qui vous est cher ?</h5>
+    <h5>Une future maman ou de jeunes parents ?</h5>
+
+    <h3>Comment ca marche ?</h3>
+    <ul>
+      <li>1. Enregistrez la somme que vous souhaitez et la personne pourra la soustraire du prix de son abonnement</li>
+      <li>2. Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre chèque cadeau</li>
+      <li>3. Recevez un mail à imprimer adressé à la personne souhaitée avec un code de réduction pour son abonnement</li>
+    </ul>
+  </div>
   <br>
-  <h2>Vos informations</h2>
-  <%= render 'form_without_user' %>
+  <div class="form-container">
+    <%= simple_form_for @order_gift do |f| %>
+      <fieldset class="form-group required">
+        <input type="hidden" name="order_gift[gift_id][]" value="">
+        Quelle formule vous souhaitez offrir?
+
+        <div class="gift-choices">
+          <% Gift.all.each do |gift| %>
+            <input class="d-none required" type="radio" value="<%= gift.id %>" name="order_gift[gift_id]" id="order_gift_gift_id_<%= gift.id %>">
+            <label class="form-check-label-gift d-flex collection_radio_buttons gift-choice" for="order_gift_gift_id_<%= gift.id %>">
+              <p><%= gift.name %><br> au prix de <br><%= gift.price %>€</p>
+            </label>
+          <% end %>
+        </div>
+      </fieldset>
+      <%= f.input :fullname, label: false, placeholder: "votre nom" %>
+      <%= f.input :email, label: false, placeholder: "votre e-mail" %>
+      <%= f.input :fullname_guest, label: false, placeholder: "le nom du bénéficiaire" %>
+      <%= f.input :email_guest, label: false, placeholder: "l'e-mail du bénéficiaire" %>
+      <br>
+      <%= f.submit 'Validez', class: 'btn btn-primary' %>
+    <% end %>
+
+  </div>
+
 </div>
