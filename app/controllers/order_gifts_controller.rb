@@ -22,7 +22,7 @@ class OrderGiftsController < ApplicationController
         cancel_url: order_url(@order_gift)
       )
       @order_gift.update(checkout_session_id: session.id)
-      redirect_to new_order_gift_payment_gift(@order_gift)
+      redirect_to new_order_gift_payment_gift_path(@order_gift)
     else
       render :new
     end

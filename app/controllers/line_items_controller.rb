@@ -6,7 +6,6 @@ class LineItemsController < ApplicationController
     @line_item.cart = @current_cart
     @line_item.product = Product.find(params[:product_id])
     @line_item.save
-    redirect_to root_path
   end
 
   # def add_quantity
