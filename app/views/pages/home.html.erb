@@ -10,7 +10,7 @@
         <div class="bottom">
           <div style="display:flex;">
             <h3><%= product.name %></h3>
-            <%= link_to line_items_path(product_id: product.id), method: :post do %>
+            <%= link_to line_items_path(product_id: product.id), method: :post, remote: true do %>
               <i class="fas fa-cart-plus" id="icone"></i>
             <% end %>
           </div>
