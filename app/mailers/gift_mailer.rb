@@ -8,7 +8,7 @@ class GiftMailer < ApplicationMailer
   def confirmation(order_gift)
     @order_gift = order_gift
     mail(
-      to:       'contact@ecolibribox.com',
+      to:       @order_gift.email,
       subject:  "Votre carte cadeau - Graîne de mômes"
     )
   end
