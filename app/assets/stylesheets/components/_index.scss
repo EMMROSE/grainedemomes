@@ -4,7 +4,17 @@
 @import "card";
 @import "cart";
 @import "filters";
+@import "footer";
 @import "form";
 @import "gift";
+@import "margin-navbar";
 @import "navbar";
 @import "product";
+
+body {
+  background: white;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}

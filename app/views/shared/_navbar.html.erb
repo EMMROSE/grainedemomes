@@ -1,19 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+<div class="navbar-lewagon fixed-top">
+  <div class="nav-items">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
   <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div>
-      <%= link_to "Braderie", root_path, class: "dropdown-item" %>
-      <%= link_to "Carte Cadeau", new_order_gift_path, class: "dropdown-item" %>
-    </div>
+  <%= link_to "Braderie", root_path, class: "btn btn-danger" %>
+  <%= link_to "Offrir", new_order_gift_path, class: "btn btn-danger"%>
+  <%= link_to "Louer", root_path, class: "btn btn-primary"%>
   </div>
+
 
   <div class="cart">
     <%= link_to cart_path(@current_cart) do %>

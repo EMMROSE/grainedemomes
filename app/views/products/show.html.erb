@@ -8,7 +8,7 @@
       <div class= "description">
         <h1 class="text-truncate"><strong><%= @product.name %></strong></h1>
         <h5><%= @product.description %></h5>
-        <h5>Prix magasin: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
+        <h5>Boutique: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
       </div>
       <div class= "price">
         <h4><%= @product.price%>€</h4>
@@ -31,7 +31,7 @@
   </div>
   <div>
     <%= link_to root_path do %>
-      <button>Dressing</button>
+      <button>Retour au dressing</button>
     <% end %>
   </div>
 </div>

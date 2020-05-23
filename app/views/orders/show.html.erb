@@ -1,13 +1,22 @@
 <div class="container">
   <div class="row py-4">
     <div class="col">
-      <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+      <h1>Votre commande n°<%= @order.id %> est confirmée.</h1>
+      <h3>Récapitulatif en détail :</h3>
       <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
+        <li><strong>Date de commande</strong>: <%= @order.created_at.to_date %></li>
+        <li><strong>Article(s): </strong></li>
+        <% @order.line_items.each do |item| %>
+          <li style="padding-left: 16px;"><%= item.product.name %></li>
+        <% end %>
+        <li><strong>Montant total</strong> <%= @order.amount %>€</li>
         </li>
       </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+      <p>Le délai de livraison est estimée à <strong>2 jours ouvrés</strong>.</p>
+      <br>
+      <p>A bientôt sur Graîne de Mômes.</p>
+      <br>
+      <%= link_to "Retour à l'accueil", root_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>

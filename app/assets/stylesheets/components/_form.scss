@@ -24,10 +24,11 @@
   font-weight: bold;
   &:hover {
     opacity: 1;
+    border: solid 2px blue;
     cursor: pointer;
   }
   &.active {
-    background-color: red;
+    border: solid 3px green;
     color: white;
     opacity: 1;
   }

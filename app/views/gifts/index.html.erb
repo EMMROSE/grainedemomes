@@ -21,12 +21,11 @@
         Quelle formule vous souhaitez offrir?
 
         <div class="gift-choices">
-          <% Gift.all.each do |gift| %>
+
+          <% Gift.all.each_with_index do |gift, i| %>
             <input class="d-none required" type="radio" value="<%= gift.id %>" name="order_gift[gift_id]" id="order_gift_gift_id_<%= gift.id %>">
             <label class="form-check-label-gift d-flex collection_radio_buttons gift-choice" for="order_gift_gift_id_<%= gift.id %>">
-              <p><%= gift.name %></p>
-              <p>pour</p>
-              <p><%= gift.price %>€</p>
+              <img src="../assets/#{i}.png" alt="">
             </label>
           <% end %>
         </div>
