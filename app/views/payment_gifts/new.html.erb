@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row py-4">
     <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @order_gift.id %></strong> for <strong><%= humanized_money_with_symbol @order_gift.amount %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+      <h1>Récapitulatif de votre commande</h1>
+      <p>Vous offrez à <strong> <%=@order_gift.fullname_guest %> </strong> la <strong><%= @order_gift.gift.name %> </strong> au prix de <strong><%= @order_gift.amount %> €</strong></p>
+      <button id="pay" class="btn btn-primary">Régler</button>
 
       <script src="https://js.stripe.com/v3/"></script>
       <script>

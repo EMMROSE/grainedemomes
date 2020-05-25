@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row py-4">
     <div class="col">
-      <h1>Votre commande n°<%= @order.id %> est confirmée.</h1>
+      <h3>Votre commande n°<%= @order.id %> est confirmée.</h3>
       <h3>Récapitulatif en détail :</h3>
       <ul class="list-unstyled">
-        <li><strong>Date de commande</strong>: <%= @order.created_at.to_date %></li>
-        <li><strong>Article(s): </strong></li>
+        <li><strong>Date de votre commande</strong>: <%= @order.created_at.to_date %></li>
+        <li><strong>Vos article(s): </strong></li>
         <% @order.line_items.each do |item| %>
           <li style="padding-left: 16px;"><%= item.product.name %></li>
         <% end %>
+        <br>
         <li><strong>Montant total</strong> <%= @order.amount %>€</li>
         </li>
       </ul>

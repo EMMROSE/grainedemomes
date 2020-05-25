@@ -1,23 +1,20 @@
 <div class="container">
   <%= simple_form_for @order do |f| %>
-    <%= f.input :fullname, label: false, placeholder: 'votre nom' %>
+    <%= f.input :fullname, label: false, placeholder: 'votre nom et prénom' %>
     <%= f.input :email, label: false, placeholder: 'votre e-mail' %>
     <%= f.input :address, label: false, placeholder: 'adresse' %>
     <%= f.input :zipcode, label: false, placeholder: 'code postal' %>
     <%= f.input :city, label: false, placeholder: 'ville' %>
    <div>
-    <h2>
-      <%= 'checkout' %>
-    </h2>
     <div>
       <span>
         Total:
       </span>
       <span>
-        <%= @cart.sub_total %>
+        <%= @cart.sub_total %> €
       </span>
     </div>
-      <%= f.submit 'payer', class: 'btn btn-primary' %>
+      <%= f.submit 'confirmer votre commande', class: 'btn btn-primary' %>
   </div>
   <% end %>
 </div>

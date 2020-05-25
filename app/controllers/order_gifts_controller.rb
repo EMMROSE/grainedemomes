@@ -18,8 +18,8 @@ class OrderGiftsController < ApplicationController
           currency: 'eur',
           quantity: 1
         }],
-        success_url: order_url(@order_gift),
-        cancel_url: order_url(@order_gift)
+        success_url: order_gift_url(@order_gift),
+        cancel_url: order_gift_url(@order_gift)
       )
       @order_gift.update(checkout_session_id: session.id)
       GiftMailer.confirmation(@order_gift).deliver_now

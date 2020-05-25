@@ -31,7 +31,7 @@
       <%= f.input :fullname, label: false, placeholder: "votre nom" %>
       <%= f.input :email, label: false, placeholder: "votre e-mail" %>
       <%= f.input :fullname_guest, label: false, placeholder: "le nom du bénéficiaire" %>
-      <%= f.input :email_guest, label: false, placeholder: "l'e-mail du bénéficiaire" %>
+      <%= f.input :email_guest, label: "Pour un envoi direct au bénéficiaire, merci de saisir son adress email:", placeholder: "l'e-mail du bénéficiaire" %>
       <br>
       <%= f.submit 'Validez', class: 'btn btn-primary' %>
     <% end %>

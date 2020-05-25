@@ -64,6 +64,7 @@ gift3.save!
 gift4 = Gift.create!(name: "Formule 5 vêtements pour 2 mois", price_cents: 6900)
 gift4.save!
 puts ">>>>>> Done!"
+puts "#{gift1.id}"
 puts ">>>>>> #{Gift.count} gifts created!"
 
 puts "Destroy all Products"
