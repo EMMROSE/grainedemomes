@@ -57,11 +57,11 @@ Gift.destroy_all
 puts "----------"
 gift1 = Gift.create!(name: "Formule 3 vêtements pour 1 mois", price_cents: 3500)
 gift1.save!
-gift2 = Gift.create!(name: "Formule 5 vêtements pour 1 mois", price_cents: 4500)
+gift2 = Gift.create!(name: "Formule 5 vêtements pour 1 mois", price_cents: 4900)
 gift2.save!
-gift3 = Gift.create!(name: "Formule 3 vêtements pour 2 mois", price_cents: 6900)
+gift3 = Gift.create!(name: "Formule 3 vêtements pour 2 mois", price_cents: 4900)
 gift3.save!
-gift4 = Gift.create!(name: "Formule 5 vêtements pour 2 mois", price_cents: 8900)
+gift4 = Gift.create!(name: "Formule 5 vêtements pour 2 mois", price_cents: 6900)
 gift4.save!
 puts ">>>>>> Done!"
 puts ">>>>>> #{Gift.count} gifts created!"
