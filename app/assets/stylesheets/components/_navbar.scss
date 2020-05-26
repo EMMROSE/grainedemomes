@@ -3,19 +3,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 20px;
   width: 100%;
-  height: 12.1vh;
+  height: 30vh;
   .nav-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
+    a {
+      color: $pink;
+      font-weight: bold;
+      font-size: 24px;
+      margin-right: 16px;
+    &:hover {text-decoration: none;}
+    }
   }
 }
 
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 140px;
 }
 
 .cart {

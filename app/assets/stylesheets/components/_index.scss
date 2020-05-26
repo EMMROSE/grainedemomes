@@ -11,10 +11,24 @@
 @import "navbar";
 @import "product";
 
-body {
-  background: white;
-}
 
 .content-wrapper {
   min-height: calc(100vh - 70px - 80px);
+}
+
+.home {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10vh;
+  h2 {
+    font-size: 50px;
+    color: $red;
+  }
+  img {
+   height: 130px;
+   width: 150px;
+   position: absolute;
+   top: -90px; left: 28%;
+  }
 }
