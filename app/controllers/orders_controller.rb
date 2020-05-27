@@ -9,7 +9,8 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @current_cart.line_items.each { |item| @order.line_items << item }
-    @order.amount = @current_cart.sub_total
+    @order.sub_total = @current_cart.sub_total
+    @order.amount_cents
     @order.user = current_user if current_user
     if @order.save
       session = Stripe::Checkout::Session.create(

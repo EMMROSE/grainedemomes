@@ -5,4 +5,14 @@ class Order < ApplicationRecord
 
   validates :email, presence: true
   monetize :amount_cents
+  monetize :shipping_cents
+  monetize :sub_total_cents
+
+  def shipping_cents
+    sub_total_cents >= 6000 ? 0 : 390
+  end
+
+  def amount_cents
+    return sub_total_cents + shipping_cents
+  end
 end

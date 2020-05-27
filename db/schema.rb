@@ -102,6 +102,10 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
     t.string "checkout_session_id"
     t.integer "amount_cents", default: 0, null: false
     t.string "amount_currency", default: "EUR", null: false
+    t.integer "shipping_cents", default: 0, null: false
+    t.string "shipping_currency", default: "EUR", null: false
+    t.integer "sub_total_cents", default: 0, null: false
+    t.string "sub_total_currency", default: "EUR", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

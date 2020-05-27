@@ -9,6 +9,8 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :city
       t.string :checkout_session_id
       t.monetize :amount
+      t.monetize :shipping
+      t.monetize :sub_total
       t.references :user, null: true, foreign_key: true
 
       t.timestamps
