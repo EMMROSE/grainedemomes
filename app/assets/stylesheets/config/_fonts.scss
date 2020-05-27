@@ -5,10 +5,10 @@
 // To use a font file (.woff) uncomment following lines
 @font-face {
   font-family: "Musubi";
-  src: font-url('../fonts/musubi/Musubi_Black.otf') format('otf');
+  src: font-url('Musubi_Black.otf') format('opentype');
 }
-$my-font: "Musubi";
+
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: $my-font;
+$headers-font: "Musubi", "Helvetica", "sans-serif";
