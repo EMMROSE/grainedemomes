@@ -13,6 +13,6 @@ class Product < ApplicationRecord
   monetize :price_cents
   monetize :old_price_cents
 
-  has_many_attached :photos
+  has_one_attached :photo
   has_one_attached :cover
 end

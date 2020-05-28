@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "sku"
-    t.string "photos"
+    t.string "photo"
     t.string "cover"
     t.text "description"
     t.integer "stock"
