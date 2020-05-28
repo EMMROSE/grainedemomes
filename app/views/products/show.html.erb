@@ -6,13 +6,13 @@
     </div>
     <div class= "product-description">
       <div class= "description">
-        <h1 class="text-truncate"><strong><%= @product.name %></strong></h1>
+        <h1><strong><%= @product.name %></strong></h1>
         <h5><%= @product.description %></h5>
-        <h5>Boutique: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
+        <h5>Prix Boutique: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
+        <h4>Prix exclusif: <%= @product.price%>€</h4>
       </div>
       <div class= "price">
-        <h4><%= @product.price%>€</h4>
-        <%= link_to "Sélectionnez", line_items_path(product_id: @product.id), method: :post, class: "btn btn-primary" %>
+        <%= link_to "Achetez", line_items_path(product_id: @product.id), method: :post, class: "btn-oval", id: "btn-product" %>
       </div>
       <div>
         <% if user_signed_in? %>
@@ -29,9 +29,9 @@
       </div>
     </div>
   </div>
-  <div>
+  <div class= "link">
     <%= link_to root_path do %>
-      <button>Retour au dressing</button>
+      Retour à la Boutique
     <% end %>
   </div>
 </div>

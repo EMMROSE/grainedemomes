@@ -15,8 +15,19 @@
     border-radius: 6%;
   }
   i {
-    color: red;
+    color: $red;
     margin-left: 10px;
+  }
+ .cart-item-left {
+    flex-basis : 60%;
+    display: flex;
+    flex-direction: row;
+  }
+  .cart-item-right {
+    flex-basis : 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 .total-amount{

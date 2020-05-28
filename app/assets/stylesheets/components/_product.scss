@@ -12,10 +12,10 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  width: 70%;
+  width: 60%;
   height: 100%;
   img {
-    height: 100%;
+    height: auto;
     width:45%;
   }
 }
@@ -26,6 +26,8 @@
   height: 100%;
   width:30%;
   color: black;
+  h4, h5 {font-family: "Elastik";}
+  h4 {color: $red;}
 }
 
 .description {
@@ -40,6 +42,9 @@
   justify-content: space-between;
   align-items: flex-end;
   a {max-width: 40%;}
+}
+.link {
+  a {color: $pink; font-size: 24px;}
 }
 
 // Smallest device

@@ -6,11 +6,9 @@
     <h5>Une future maman ou de jeunes parents ?</h5>
 
     <h3>Comment ca marche ?</h3>
-    <ul>
-      <li>1. Sélectionnez la formule parmi nos 4 choix d'abonnement que vous souhaitez offrir</li>
-      <li>2. Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre cadeau</li>
-      <li>3. Recevez un mail à imprimer adressé à la personne souhaitée avec un code de réduction pour son abonnement</li>
-    </ul>
+      <h5><strong>1.</strong> Sélectionnez la formule parmi nos 4 choix d'abonnement que vous souhaitez offrir</h5>
+      <h5><strong>2.</strong> Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre cadeau</h5>
+      <h5><strong>3.</strong> Recevez un email à imprimer adressé à la personne souhaitée avec un code de réduction pour son abonnement</h5>
   </div>
   <br>
   <div class="form-container">
@@ -28,12 +26,12 @@
           <% end %>
         </div>
       </fieldset>
-      <%= f.input :fullname, label: false, placeholder: "votre nom" %>
-      <%= f.input :email, label: false, placeholder: "votre e-mail" %>
-      <%= f.input :fullname_guest, label: false, placeholder: "le nom du bénéficiaire" %>
+      <%= f.input :fullname, label: false, placeholder: "Votre nom" %>
+      <%= f.input :email, label: false, placeholder: "Votre e-mail" %>
+      <%= f.input :fullname_guest, label: false, placeholder: "Le nom du bénéficiaire" %>
       <%= f.input :email_guest, label: "Pour un envoi direct au bénéficiaire, merci de saisir son adress email:", placeholder: "l'e-mail du bénéficiaire" %>
       <br>
-      <%= f.submit 'Validez', class: 'btn btn-primary' %>
+      <%= f.submit 'Validez', class: 'btn-oval' %>
     <% end %>
 
   </div>

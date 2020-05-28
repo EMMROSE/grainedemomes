@@ -1,0 +1,16 @@
+.btn-oval {
+  color: white;
+  background-color: $red;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-family: 'Elastik A';
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#btn-product {
+  padding: 8px 10px 8px 10px;
+  &:hover {text-decoration: none; color: white;}
+}

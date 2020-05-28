@@ -9,32 +9,35 @@
       <div class="cart-items">
         <% @line_items.each do |line_item| %>
           <div class="cart-item">
-            <%= cl_image_tag line_item.product.cover.key%>
-            <%= line_item.product.name %>
-            <p>: </p>
-            <p><%= (line_item.total_price) %> €</p>
-            <%= link_to line_item_path(line_item), method: :delete do%>
-              <i class="fas fa-trash"></i>
-            <% end %>
+            <div class="cart-item-left">
+              <%= cl_image_tag line_item.product.cover.key%>
+              <%= line_item.product.name %>
+            </div>
+            <div class="cart-item-right">
+              <p><%= line_item.product.price %> €</p>
+              <%= link_to line_item_path(line_item), method: :delete do%>
+                <i class="fas fa-trash"></i>
+              <% end %>
+            </div>
           </div>
           <br>
         <% end %>
       </div>
       <div class="total-amount">
-        <div style="display:flex;">
+        <div style="display:flex; align-items: center;">
           <h4>Total de ma commande :</h4>
           <h4>  <%= (@cart.sub_total) %> €</h4>
         </div>
           <%= link_to new_order_path do %>
-            <button>Commander</button>
+            <button class="btn-oval">Commander</button>
           <% end %>
       </div>
       <br>
       <div style="display:flex; flex-direction: row;">
         <%= link_to cart_path, method: :delete, data: {confirm: 'are_you_sure?'} do %>
-          <i class="fas fa-trash" style="color: red;"></i>
+          <i class="fas fa-trash" style="color: #e13a40;"> </i>
         <% end %>
-        <p style="color: red;"> Videz le panier</p>
+        <p style="color: #e13a40;">Videz mon panier</p>
       </div>
   <% end %>
 </div>
