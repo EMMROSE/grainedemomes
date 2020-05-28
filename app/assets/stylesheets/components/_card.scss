@@ -59,8 +59,11 @@
   align-items: flex-start;
   position: relative;
   text-decoration: none;
+
+  h3 { color: $red; font-size: 1.25rem;}
+  h5 {font-size: 1.25rem; font-family: "Elastik";}
   #icone {
-    font-size: 24px;
+    font-size: 20px;
     color: grey;
     position: absolute;
     bottom: 32px; right: 10px;
@@ -70,6 +73,8 @@
     &:hover {color: grey; text-decoration: none;}
     position: absolute;
     bottom: 20px; right: 10px;
+    font-size: 0.95rem;
+    font-family: "Elastik";
   }
 }
 

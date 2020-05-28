@@ -1,16 +1,17 @@
 .form-container {
   background-color: white;
   border-radius: 5px;
-  padding: 0px;
-  width: 80%;
+  margin-left: 9vh;
+
+  h3 {color: $red;}
 }
 
 .gift-choices {
-  display: -webkit-box!important;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 20px 0px;
+  width: 90%;
 }
 
 .gift-choice {

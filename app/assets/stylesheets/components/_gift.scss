@@ -1,5 +1,14 @@
+.gift-container {
+  padding: 1vh 20vh 10vh 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .gift-text {
   max-width: 100%;
+  h3 {color: $red;}
+  h5 {font-family: "Elastik";}
 }
 
 // Smallest device

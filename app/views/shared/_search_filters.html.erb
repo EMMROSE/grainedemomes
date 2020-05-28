@@ -19,7 +19,7 @@
         <% else %>
           <div class="filter activity-filters dropdown">
             <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Categories
+              Catégorie
             </button>
             <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
               <% categories = [] %>
@@ -79,7 +79,7 @@
               <% sizes.uniq.each do |size| %>
                 <% request.query_parameters[:size] = size %>
                 <%= link_to root_path(request.query_parameters), class: "dropdown-item" do %>
-                  <%= size.name %>mois
+                  <%= size.name %> mois
                 <% end %>
                 <% request.query_parameters.except!(:size) %>
               <% end %>

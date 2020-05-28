@@ -1,5 +1,5 @@
 <!-- NEW FOR ORDER_GIFT -->
-<div class="container">
+<div class="gift-container">
   <div class= "gift-text">
     <h3>Faites votre cadeau maintenant</h3>
     <h5>Vous souhaitez offrir un cadeau à quelqu’un qui vous est cher ?</h5>
@@ -7,8 +7,8 @@
 
     <h3>Comment ca marche ?</h3>
     <ul>
-      <li>1. Enregistrez la somme que vous souhaitez et la personne pourra la soustraire du prix de son abonnement</li>
-      <li>2. Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre chèque cadeau</li>
+      <li>1. Sélectionnez la formule parmi nos 4 choix d'abonnement que vous souhaitez offrir</li>
+      <li>2. Payez rapidement et simplement en ligne après avoir rempli les informations sur la personne à qui vous souhaitez offrir votre cadeau</li>
       <li>3. Recevez un mail à imprimer adressé à la personne souhaitée avec un code de réduction pour son abonnement</li>
     </ul>
   </div>
@@ -17,7 +17,7 @@
     <%= simple_form_for @order_gift do |f| %>
       <fieldset class="form-group required">
         <input type="hidden" name="order_gift[gift_id][]" value="">
-        Quelle formule vous souhaitez offrir?
+        <h3>Quelle formule vous souhaitez offrir?</h3>
 
         <div class="gift-choices">
           <% Gift.all.each do |gift| %>
