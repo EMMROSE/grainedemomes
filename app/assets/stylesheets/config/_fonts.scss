@@ -3,12 +3,18 @@
 
 
 // To use a font file (.woff) uncomment following lines
+
+@font-face {
+  font-family: "Elastik";
+  src: font-url('Elastik/Elastik-A.ttf') format('truetype');
+}
+
 @font-face {
   font-family: "Musubi";
-  src: font-url('Musubi_Black.otf') format('opentype');
+  src: font-url('Musubi/Musubi-Black.otf') format('truetype');
 }
 
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
+$body-font: "Elastik", "Helvetica", "sans-serif";
 $headers-font: "Musubi", "Helvetica", "sans-serif";
