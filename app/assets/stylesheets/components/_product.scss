@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 350px;
+    height: auto;
   }
   .product-illustration {
     flex-direction: column;
@@ -65,14 +65,16 @@
     }
   }
   .product-description {
-    width:50%;
+    width:100%;
+    height: auto;
     h1 {font-size: 1.5rem;}
   }
   .price {
     height: 30%;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 16px;
     a {max-width: 80%;}
   }
 }

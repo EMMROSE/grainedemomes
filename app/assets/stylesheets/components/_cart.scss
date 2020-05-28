@@ -41,5 +41,9 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .total-amount{
     flex-direction: column;
+    width: 110%;
+  }
+  .cart-item {
+    width: 100%;
   }
 }
