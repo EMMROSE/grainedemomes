@@ -7,14 +7,16 @@
     <%= f.input :city, label: false, placeholder: 'ville' %>
    <div>
     <div>
-      <span>
+      <span style="font-size: 24px;">
         Total:
       </span>
-      <span>
+      <span style="font-size: 24px;">
         <%= @cart.sub_total %> €
+        <br>
       </span>
     </div>
-      <%= f.submit 'confirmer votre commande', class: 'btn btn-primary' %>
+    <br>
+      <%= f.submit 'confirmer votre commande', class: 'btn-oval' %>
   </div>
   <% end %>
 </div>

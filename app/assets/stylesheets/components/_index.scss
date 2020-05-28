@@ -1,6 +1,7 @@
 // Import your components CSS files here.
 @import "alert";
 @import "avatar";
+@import "bandeau";
 @import "button";
 @import "card";
 @import "cart";
@@ -30,6 +31,24 @@
    height: 130px;
    width: 150px;
    position: absolute;
-   top: -90px; left: 13%;
+   top: -80px; left: 13%;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .home {
+    position: relative;
+    margin-bottom: 10vh;
+    margin-top:10vh;
+    h2 {
+      font-size: 26px;
+    }
+    img {
+     height: 117px;
+     width: 135px;
+     position: absolute;
+     top: -124px; left: 1%;
+    }
   }
 }

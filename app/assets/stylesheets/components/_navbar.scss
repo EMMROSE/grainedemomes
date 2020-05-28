@@ -6,6 +6,9 @@
   padding: 20px;
   width: 100%;
   height: 13vh;
+  position: sticky;
+  top: 20px;
+  z-index: 9;
   .nav-items {
     display: flex;
     align-items: center;
@@ -24,6 +27,7 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 140px;
+  margin-top: 8px;
 }
 
 .cart {
@@ -53,5 +57,33 @@
 }
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-
+  .navbar-lewagon {
+    height: 17vh;
+    .nav-items {
+      width: 100%;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+  .navbar-lewagon .navbar-brand img {
+    width: 70px;
+  }
+  .cart {
+    position: absolute;
+    top: 0px; right: -8px;
+    p {
+      font: 12px;
+      width: 18px;
+      position: absolute;
+      right: 8px; top: 10px;
+    }
+    i {
+      margin: 20px;
+      font-size: 24px;
+      color: $pink;
+      position: relative;
+      z-index: 2;
+    }
+  }
 }

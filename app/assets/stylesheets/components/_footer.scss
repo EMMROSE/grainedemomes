@@ -23,3 +23,20 @@
 .footer-center {
   a { margin: 16px;}
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .footer {
+    img {
+      width: 100px;
+      height: 56px;
+    }
+    .footer-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 16px 0px 16px 0px;
+    }
+  }
+}

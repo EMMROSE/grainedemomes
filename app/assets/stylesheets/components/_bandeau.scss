@@ -1,0 +1,11 @@
+.bandeau {
+  width: 100%;
+  background-color: $pink;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 24px;
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+}

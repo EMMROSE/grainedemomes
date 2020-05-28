@@ -1,6 +1,6 @@
 <div>
   <div class="home">
-    <h2>Notre Boutique Seconde Mainq</h2>
+    <h2>Notre Boutique Seconde Main</h2>
     <img src="../assets/coeur-background.png" alt="">
   </div>
   <div class="cards">
@@ -21,7 +21,11 @@
           <div style="display:flex;">
             <h5 style="text-decoration: line-through;"><%= product.old_price %>€  </h5>
             <h5><%= product.price %>€</h5>
-            <h5><%= link_to "en savoir +", product_path(product) %></h5>
+            <!-- icone eye for smallest device -->
+            <%= link_to product_path(product) do %>
+              <i class="fas fa-eye" id="eye"></i>
+            <% end %>
+            <h5 id="savoir"><%= link_to "en savoir +", product_path(product) %></h5>
           </div>
         </div>
       </div>

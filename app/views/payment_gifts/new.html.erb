@@ -3,7 +3,7 @@
     <div class="col">
       <h1>Récapitulatif de votre commande</h1>
       <p>Vous offrez à <strong> <%=@order_gift.fullname_guest %> </strong> la <strong><%= @order_gift.gift.name %> </strong> au prix de <strong><%= @order_gift.amount %> €</strong></p>
-      <button id="pay" class="btn btn-primary">Régler</button>
+      <button id="pay" class="btn-oval">Régler</button>
 
       <script src="https://js.stripe.com/v3/"></script>
       <script>
