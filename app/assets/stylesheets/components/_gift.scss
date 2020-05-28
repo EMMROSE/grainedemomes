@@ -14,7 +14,10 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .gift-text {
+  .gift-container {
+  padding: 1vh 5vh 10vh 5vh;
+}
+.gift-text {
     h3 {font-size: 1rem;}
     h5 {font-size: 0.75rem;}
     li {font-size: 0.75rem;}
