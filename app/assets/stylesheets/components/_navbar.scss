@@ -38,15 +38,17 @@
     text-align: center;
     font-weight: bold;
     color: white;
-    background-color: red;
+    background-color: $red;
     position: absolute;
     right: 10px; top: 10px;
+    z-index: 1;
   }
   i {
     margin: 20px;
     font-size: 32px;
     color: black;
     position: relative;
+    z-index: 2;
   }
 }
 // Smallest device
