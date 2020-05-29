@@ -1,0 +1,13 @@
+<div class="container" style="margin-top: 100px;">
+  <%= link_to "Log out", destroy_user_session_path,class: "btn btn-primary", method: :delete %>
+  <h1>Les produits</h1>
+  <div>
+    <a href="<%=new_product_path%>" class="btn btn-primary">Nouveau Produit</a>
+    <br>
+    <p>Rechercher un produit :</p>
+   <!--  <div class="search mt-2">
+        Add module to research if it needs
+    </div> -->
+  </div>
+
+</div>

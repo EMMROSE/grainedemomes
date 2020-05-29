@@ -1,0 +1,22 @@
+<div class="container form-container">
+ <% new_product = Product.new %>
+ <%= simple_form_for(new_product) do |f| %>
+   <div class="form-top">
+    <%= f.input :category, as: :radio_buttons, collection: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'], wrapper: :vertical_collection_inline %>
+    <%= f.input :genre, as: :radio_buttons, collection: ['g1', 'g2', 'g3'], wrapper: :vertical_collection_inline %>
+    <%= f.input :size, as: :radio_buttons, collection: ['s1', 's2', 's3', 's4', 's5', 's6'], wrapper: :vertical_collection_inline %>
+    <%= f.input :name, label: 'Nom', placeholder: "Nom du produit" %>
+    <%= f.number_field :old_price_cents, label: "Prix (en centimes)", placeholder: 0%>
+    <%= f.number_field :price_cents, label: "Prix (en centimes)", placeholder: 0%>
+    <%= f.input :sku, label: 'Référence (SKU)', placeholder: "Référence du produit" %>
+    <%= f.input :description, label: 'Ajoutez une description', as: :text, placeholder: "Rédiger ici la description du produit..." %>
+    <div class="d-flex">
+      <%= f.input :cover, label: 'Ajoutez une photo de couverture', as: :file %>
+      <%= f.input :photo, label: 'Ajoutez une seconde photo', as: :file %>
+    </div>
+   </div>
+   <div class="form-button">
+    <%= f.submit "Créer le produit", class: 'btn btn-primary' %>
+   </div>
+ <% end %>
+</div>

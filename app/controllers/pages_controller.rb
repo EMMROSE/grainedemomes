@@ -14,5 +14,7 @@ class PagesController < ApplicationController
     @products = @products.where(size: params[:size]) if params[:size].present?
   end
 
+  def admin
+  end
 
 end
