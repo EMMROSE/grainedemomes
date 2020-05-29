@@ -8,6 +8,7 @@
       <div class= "description">
         <h1><strong><%= @product.name %></strong></h1>
         <h5><%= @product.description %></h5>
+        <h5>Taille: <%= @product.size.name %> mois</h5>
         <h5>Prix Boutique: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
         <h4>Prix exclusif: <%= @product.price%>€</h4>
       </div>
