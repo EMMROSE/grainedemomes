@@ -1,0 +1,16 @@
+<h3>Nouvelle commande sur la boutique</h3>
+
+<p>Client => <%= @order.fullname%></p>
+<p>email => <%= @order.email %></p>
+<p>adresse => <%= @order.address %></p>
+<p>CP => <%= @order.zipcode %></p>
+<p>Ville => <%= @order.city %></p>
+
+<p>Détails =></p>
+<% @order.line-items.each do |item| %>
+	<p><%= item.product.name %> - size <%= item.product.size %> - RÉF: <%= item.product.sku %></p>
+<% end %>
+
+<h3>Graine de mômes - Boutique</h3>
+
+
