@@ -12,6 +12,16 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
+    def research
+      if params[:query].present?
+        @products = Product.search_by_name_sku(params[:query])
+      else @products = Product.all
+      end
+      if @products.count == 0
+        @products = Product.all
+      end
+    end
+
     def show
       @product = Product.find(params[:id])
     end

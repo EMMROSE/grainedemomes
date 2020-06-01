@@ -6,7 +6,10 @@
     <%= f.input :genre, as: :radio_buttons, collection: ['g1', 'g2', 'g3'], wrapper: :vertical_collection_inline %>
     <%= f.input :size, as: :radio_buttons, collection: ['s1', 's2', 's3', 's4', 's5', 's6'], wrapper: :vertical_collection_inline %>
     <%= f.input :name, label: 'Nom', placeholder: "Nom du produit" %>
+    <p>Prix boutique</p>
     <%= f.number_field :old_price_cents, label: "Prix (en centimes)", placeholder: 0%>
+    <br>
+    <p>Prix Graine de mômes</p>
     <%= f.number_field :price_cents, label: "Prix (en centimes)", placeholder: 0%>
     <%= f.input :sku, label: 'Référence (SKU)', placeholder: "Référence du produit" %>
     <%= f.input :description, label: 'Ajoutez une description', as: :text, placeholder: "Rédiger ici la description du produit..." %>
@@ -18,5 +21,6 @@
    <div class="form-button">
     <%= f.submit "Créer le produit", class: 'btn btn-primary' %>
    </div>
+   <br>
  <% end %>
 </div>

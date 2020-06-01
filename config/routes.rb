@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'admin', to: 'pages#admin'
 
   resources :products
+    get 'products/:id/research', to: "products#research", as: "product_research"
   resources :orders do
     resources :payments, only: :new
   end

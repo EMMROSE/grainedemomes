@@ -15,7 +15,7 @@ class GiftMailer < ApplicationMailer
   def information(order_gift)
     @order_gift = order_gift
     mail(
-      to:       'contact@ecolibribox.com',
+      to:       'bonjour@grainedemomes.com',
       subject:  "Nouvelle carte cadeau"
     )
   end

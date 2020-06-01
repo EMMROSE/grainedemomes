@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contact@ecolibribox.com'
+  default from: 'bonjour@grainedemomes.com'
   layout 'mailer'
 end

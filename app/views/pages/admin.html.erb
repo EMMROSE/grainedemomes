@@ -4,10 +4,25 @@
   <div>
     <a href="<%=new_product_path%>" class="btn btn-primary">Nouveau Produit</a>
     <br>
-    <p>Rechercher un produit :</p>
-   <!--  <div class="search mt-2">
-        Add module to research if it needs
-    </div> -->
+  <p>Rechercher un produit :</p>
+      <div class="search mt-2">
+        <%= form_tag products_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
+          <div class="search-form-control form-group mt-1 mb-0">
+            <%= text_field_tag :query,
+                params[:query],
+                class: "search-input form-control string required",
+                id: "search_query",
+                placeholder: "Effectuer une recherche par nom ou par n° de référence",
+                value: ""
+            %>
+            <%= button_tag(type: "submit", class: "btn btn-flat") do %>
+              <i class="fas fa-search"></i> Search
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 
 </div>

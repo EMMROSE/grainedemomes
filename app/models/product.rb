@@ -15,4 +15,12 @@ class Product < ApplicationRecord
 
   has_one_attached :photo
   has_one_attached :cover
+
+  #pg search
+  include PgSearch::Model
+  pg_search_scope :search_by_name_sku,
+    against: [ :name, :sku ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
