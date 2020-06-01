@@ -25,7 +25,11 @@
       </div>
       <div class="total-amount">
         <div style="display:flex; align-items: center;">
-          <h4>Total de ma commande :</h4>
+          <h4>Frais de port: </h4>
+          <h4><%= (@cart.promotion) %></h4>
+        </div>
+        <div style="display:flex; align-items: center;">
+          <h4>Total de ma commande: </h4>
           <h4>  <%= (@cart.sub_total) %> €</h4>
         </div>
           <%= link_to new_order_path do %>

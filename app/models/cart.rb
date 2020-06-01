@@ -11,4 +11,8 @@ class Cart < ApplicationRecord
     return sum
   end
 
+  def promotion
+    sub_total >= 60.to_money ? " offert" : " 3,90 €"
+  end
+
 end

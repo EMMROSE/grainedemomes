@@ -15,7 +15,12 @@ class OrdersController < ApplicationController
     if @order.save
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
-        line_items: stripe_line_items(@order.line_items),
+        line_items: [{
+          name: "Commande n° #{@order.id} pour #{@order.fullname} de #{@order.line_items.count} article(s)",
+          amount: @order.amount_cents,
+          currency: 'eur',
+          quantity: 1
+        }],
         success_url: order_url(@order),
         cancel_url: order_url(@order)
       )
@@ -72,7 +77,7 @@ class OrdersController < ApplicationController
     order_items.each do |item|
       item_hash = {
         name: item.product.name,
-        amount: item.product.price_cents,
+        amount: order.price_cents,
         quantity: 1,
         currency: 'eur'
       }

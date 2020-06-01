@@ -10,10 +10,17 @@
       <span style="font-size: 24px;">
         Total:
       </span>
-      <span style="font-size: 24px;">
-        <%= @cart.sub_total %> €
-        <br>
-      </span>
+      <% if @cart.sub_total >= 60.to_money %>
+        <span style="font-size: 24px;">
+          <%= @cart.sub_total %> € - les frais de port sont offerts
+          <br>
+        </span>
+      <% else %>
+        <span style="font-size: 24px;">
+          <%= @cart.sub_total %> € + <%= @cart.promotion %> de frais de port
+          <br>
+        </span>
+      <% end %>
     </div>
     <br>
       <%= f.submit 'confirmer votre commande', class: 'btn-oval' %>
