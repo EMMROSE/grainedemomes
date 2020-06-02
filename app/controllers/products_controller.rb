@@ -32,15 +32,25 @@ class ProductsController < ApplicationController
 
     def create
       @product = Product.new(product_params)
-
       if @product.save
-        flash.notice = "Thank you! you add successfully a new product."
         redirect_to root_path
+        flash[:notice] = "Votre produit a bien été enregistré."
       else
-        #flash.now[:error] = t('flash.work.error_html')
         render :new
+        flash[:alert] = "Veuillez compléter le formulaire s'il vous plaît."
       end
     end
+    # def create
+    #   @product = Product.new(product_params)
+    #   if @product.save
+    #     flash.notice = "Thank you! you add successfully a new product."
+    #     redirect_to root_path
+    #   else
+    #     #flash.now[:error] = t('flash.work.error_html')
+    #     render :new
+    #   end
+    # end
+
     def edit
       @product = Product.find(params[:id])
     end
@@ -62,7 +72,7 @@ class ProductsController < ApplicationController
     private
 
     def product_params
-      params.require(:product).permit(:name, :description, :genre_id, :size_id, :category_id, :sku, :cover, :price_cents, :old_price_cents)
+      params.require(:product).permit(:name, :description, :genre_id, :category_id, :size_id, :sku, :cover, :photo, :price_cents, :old_price_cents)
     end
     # Ne pas oublier de remettre photos: [] dans les params
 end
