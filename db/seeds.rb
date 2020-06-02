@@ -1,5 +1,11 @@
 require "open-uri"
 
+puts 'Create users'
+@user1 = User.new(email: 'mboizet1@gmail.com', password:'Chocolataulait9!')
+@user1.save!
+puts '>>>>>> Done!'
+puts '----------------'
+
 puts "Destroy all Categories"
 Category.destroy_all
 
