@@ -7,7 +7,7 @@
 <p>Ville => <%= @order.city %></p>
 
 <p>Détails =></p>
-<% @order.line-items.each do |item| %>
+<% @order.line_items.each do |item| %>
 	<p><%= item.product.name %> - size <%= item.product.size %> - RÉF: <%= item.product.sku %></p>
 <% end %>
 
