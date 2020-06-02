@@ -36,12 +36,12 @@ class OrdersController < ApplicationController
   def show
     if current_user
       @order = current_user.orders.find(params[:id])
-      GiftMailer.confirmation(@order).deliver_now
-      GiftMailer.information(@order).deliver_now
+      OrderMailer.confirmation(@order).deliver_now
+      OrderMailer.information(@order).deliver_now
     else
       @order = Order.find(params[:id])
-      GiftMailer.confirmation(@order).deliver_now
-      GiftMailer.information(@order).deliver_now
+      OrderMailer.confirmation(@order).deliver_now
+      OrderMailer.information(@order).deliver_now
     end
   end
 

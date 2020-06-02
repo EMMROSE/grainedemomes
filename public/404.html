@@ -1,83 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cette page n'est pas disponible</title>
+  <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  @import url(https://fonts.googleapis.com/css?family=Oswald:400);
-
-  .banner-error {
-    background: $blue;
-    font-size: 1em;
-    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
-    line-height: 1.4;
-  }
-
-  .banner {
-    position: relative;
-    z-index: 1;
-    margin: 80px auto;
-    width: 380px;
-  }
-
-  .banner .line {
-    margin: 0 0 10px;
-    width: 100%;
-    height: 78px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3em;
-    line-height: 78px;
-    transform: skew(0, -15deg);
-  }
-
-  .banner .line:after,
-  .banner .line:first-child:before {
-    position: absolute;
-    top: 44px;
-    left: 0;
-    z-index: -1;
-    display: block;
-    width: 380px;
-    height: 78px;
-    border-radius: 4px;
-    background: rgba(180,180,180,0.8);
-    content: '';
-    transform: skew(0, 15deg);
-  }
-
-  .banner .line:first-child:before {
-    top: -10px;
-    right: 0;
-    left: auto;
-  }
-
-  .banner .line:first-child:before,
-  .banner .line:last-child:after {
-    width: 0;
-    height: 0;
-    border-width: 38px;
-    border-style: solid;
-    border-color: rgba(180,180,180,0.8) rgba(180,180,180,0.8) transparent transparent;
-    background: transparent;
-  }
-
-  .banner .line:last-child:after {
-    top: 12px;
-    border-color: transparent transparent rgba(180,180,180,0.8) rgba(180,180,180,0.8);
-  }
-
-  .banner span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.9);
-    color: #666;
-    text-shadow: 1px 1px 0 #444;
-  }
-
   .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
@@ -128,26 +54,13 @@
   </style>
 </head>
 
-<body class="banner-error">
+<body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
-  <div>
-    <img src="../assets/astronaute.jpg" alt="" style="width: 100%; height: auto;">
-  </div>
-  <div class="banner">
-    <div class="line">
-      <span>Désolé,</span>
+  <div class="dialog">
+    <div>
+      <h1>We're sorry, but something went wrong.</h1>
     </div>
-    <div class="line">
-      <span>cette page n'est</span>
-    </div>
-    <div class="line">
-      <span>pas disponible</span>
-    </div>
-  </div>
-  <div>
-    <%= link_to products_path do %>
-      <button class="btn-oval">Retour à la Boutique</button>
-    <% end %>
+    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
