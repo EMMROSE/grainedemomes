@@ -1,7 +1,12 @@
 <p>Bonjour,</p>
 <br>
 <p>Nous vous confirmons avoir bien reçu votre commande.</p>
-<p>Celle-ci va vous être expédiée dans un délai de 2 jours ouvrés.</p>
+<p>Article(s) de votre commande :</p>
+<br>
+<% @order.line_items.each do |item| %>
+  <p><%= item.product.name %> - size <%= item.product.size.name %></p>
+<% end %>
+<p>Celle-ci va vous être expédiée dans un délai de 3 jours ouvrés.</p>
 <br>
 <h3><strong>L'équipe de Graîne de Mômes</strong></h3>
 

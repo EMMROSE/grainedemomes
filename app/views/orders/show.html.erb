@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col">
-      <h3>Votre commande n°<%= @order.id %> est confirmée.</h3>
-      <h5>Récapitulatif en détail :</h5>
+      <h3>Votre commande est confirmée.</h3>
+      <h5>Récapitulatif :</h5>
       <ul class="list-unstyled">
         <li><strong>Date de votre commande</strong>: <%= @order.created_at.to_date %></li>
         <li><strong>Vos article(s): </strong></li>
@@ -12,7 +12,7 @@
         <li><strong>Montant total</strong> <%= @order.amount %>€</li>
         </li>
       </ul>
-      <p>Le délai de livraison est estimé à <strong>2 jours ouvrés</strong>.</p>
+      <p>Le délai de livraison est estimé à <strong>3 jours ouvrés</strong> avec notre prestataire Mondial Relay.</p>
       <br>
       <h5>A bientôt sur Graîne de Mômes.</h5>
       <br>

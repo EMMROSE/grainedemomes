@@ -8,7 +8,7 @@
 
 <p>Détails =></p>
 <% @order.line_items.each do |item| %>
-	<p><%= item.product.name %> - size <%= item.product.size %> - RÉF: <%= item.product.sku %></p>
+	<p><%= item.product.name %> - size <%= item.product.size.name %> - RÉF: <%= item.product.sku %></p>
 <% end %>
 
 <h3>Graine de mômes - Boutique</h3>

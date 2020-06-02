@@ -113,7 +113,14 @@
     position: relative;
 }
 
-
+// VERY smallest device
+@media (min-width: 100px) and (max-width: 320px) {
+  .bottom {
+    #eye {
+      display: none;
+    }
+  }
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

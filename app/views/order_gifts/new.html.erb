@@ -1,21 +1,21 @@
 <!-- NEW FOR ORDER_GIFT -->
 <div class="gift-container">
   <div class= "gift-text">
-    <h3>OFFREZ VOTRE CARTE CADEAU GRAINE DE MOMES</h3>
+    <h3>OFFREZ VOTRE CARTE CADEAU</h3>
     <h5>Faites plaisir à de jeunes parents !</h5>
 
     <h3>Comment ca marche ?</h3>
-      <h5><strong>1.</strong> Sélectionnez la formule que vous souhaitez offrir</h5>
-      <h5><strong>2.</strong> Complétez le formulaire et procéder au paiement</h5>
-      <h5><strong>3.</strong> Recevez par mail la carte cadeau</h5>
-      <h5><strong>4.</strong> Le bénéficiaire active la carte au moment de sa sélection (pas de date d'expiration)</h5>
+      <h5><strong>1.</strong> Sélectionnez la formule</h5>
+      <h5><strong>2.</strong> Complétez le formulaire et procédez au paiement</h5>
+      <h5><strong>3.</strong> Recevez par e-mail votre carte cadeau</h5>
+      <h5><strong>4.</strong> Le bénéficiaire active la carte au moment de sa sélection (sans date d'expiration)</h5>
   </div>
   <br>
   <div class="form-container">
     <%= simple_form_for @order_gift do |f| %>
       <fieldset class="form-group required">
         <input type="hidden" name="order_gift[gift_id][]" value="">
-        <h3>Quelle formule vous souhaitez offrir?</h3>
+        <h3>Quelle formule souhaitez-vous offrir?</h3>
 
         <div class="gift-choices">
           <% Gift.all.each do |gift| %>
