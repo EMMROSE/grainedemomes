@@ -25,3 +25,26 @@
     justify-content: center;
   }
 }
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 320px) {
+  #btn-regler {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-oval {
+    color: white;
+    background-color: $red;
+    text-transform: uppercase;
+    border: 1px solid;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-family: 'Elastik A';
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+}
