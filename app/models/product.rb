@@ -5,7 +5,7 @@ class Product < ApplicationRecord
   has_many :line_items, dependent: :destroy
 
   validates :name, presence: true #, length: { in: 3...16 }
-  validates :description, presence: true, length: { in: 6...100 }
+  validates :description, presence: true, length: { in: 6...150 }
   validates :price_cents, presence: true, numericality: { greater_than: 0 }
   validates :old_price_cents, presence: true, numericality: { greater_than: 0 }
   validates :sku, presence: true, uniqueness: true
