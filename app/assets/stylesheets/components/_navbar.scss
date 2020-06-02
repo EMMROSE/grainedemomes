@@ -63,6 +63,7 @@
       width: 100%;
       a {
         font-size: 12px;
+        margin-right: 6px;
       }
     }
   }
@@ -71,7 +72,7 @@
   }
   .cart {
     position: absolute;
-    top: 0px; right: -8px;
+    top: -4px; right: -8px;
     p {
       font: 12px;
       width: 18px;
