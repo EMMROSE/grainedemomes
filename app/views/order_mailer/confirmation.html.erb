@@ -2,9 +2,8 @@
 <br>
 <p>Nous vous confirmons avoir bien reçu votre commande.</p>
 <p>Article(s) de votre commande :</p>
-<br>
 <% @order.line_items.each do |item| %>
-  <p><%= item.product.name %> - size <%= item.product.size.name %></p>
+  <p><%= item.product.name %> - taille:  <%= item.product.size.name %> mois</p>
 <% end %>
 <p>Celle-ci va vous être expédiée dans un délai de 3 jours ouvrés.</p>
 <br>
