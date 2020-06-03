@@ -1,10 +1,10 @@
 <!-- NEW FOR ORDER_GIFT -->
 <div class="gift-container">
   <div class= "gift-text">
-    <h3>OFFREZ VOTRE CARTE CADEAU</h3>
+    <h3>CARTE CADEAU</h3>
     <h5>Faites plaisir à de jeunes parents !</h5>
-
-    <h3>Comment ca marche ?</h3>
+    <br>
+    <h3>Comment ça marche ?</h3>
       <h5><strong>1.</strong> Sélectionnez la formule</h5>
       <h5><strong>2.</strong> Complétez le formulaire et procédez au paiement</h5>
       <h5><strong>3.</strong> Recevez par e-mail votre carte cadeau</h5>
@@ -15,7 +15,7 @@
     <%= simple_form_for @order_gift do |f| %>
       <fieldset class="form-group required">
         <input type="hidden" name="order_gift[gift_id][]" value="">
-        <h3>Quelle formule souhaitez-vous offrir?</h3>
+        <h3>Choisissez votre formule</h3>
 
         <div class="gift-choices">
           <% Gift.all.each do |gift| %>
@@ -29,7 +29,7 @@
       <%= f.input :fullname, label: false, placeholder: "Votre nom" %>
       <%= f.input :email, label: false, placeholder: "Votre e-mail" %>
       <%= f.input :fullname_guest, label: false, placeholder: "Le nom du bénéficiaire" %>
-      <%= f.input :email_guest, label: "Pour un envoi direct au bénéficiaire, merci de saisir son adress email:", placeholder: "l'e-mail du bénéficiaire" %>
+      <%= f.input :email_guest, label: "Pour un envoi direct au bénéficiaire, merci de saisir son adress e-mail:", placeholder: "l'e-mail du bénéficiaire" %>
       <br>
       <%= f.submit 'Validez', class: 'btn-oval' %>
     <% end %>

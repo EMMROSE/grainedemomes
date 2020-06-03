@@ -20,15 +20,22 @@
       font-size: 24px;
       margin-right: 16px;
     &:hover {text-decoration: none;}
+    img {
+      width: 140px;
+      margin-top: 8px;
+    }
     }
   }
 }
 
 
-.navbar-lewagon .navbar-brand img {
-  width: 140px;
-  margin-top: 8px;
-}
+// .navbar-lewagon .navbar-brand
+// a {
+//   img {
+//     width: 140px;
+//     margin-top: 8px;
+//   }
+// }
 
 .cart {
   position: absolute;
@@ -64,12 +71,13 @@
       a {
         font-size: 12px;
         margin-right: 6px;
+        img {
+          width: 70px;
+        }
       }
     }
   }
-  .navbar-lewagon .navbar-brand img {
-    width: 70px;
-  }
+
   .cart {
     position: absolute;
     top: -4px; right: -8px;
@@ -98,12 +106,13 @@
       a {
         font-size: 18px;
         margin-right: 35px;
+        img {
+          width: 80px;
+        }
       }
     }
   }
-  .navbar-lewagon .navbar-brand img {
-    width: 80px;
-  }
+
   .cart {
     position: absolute;
     top: -4px; right: -8px;

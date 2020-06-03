@@ -28,16 +28,17 @@
     font-size: 50px;
     color: $red;
   }
+  h5 {color: $red;}
   img {
    height: 130px;
    width: 150px;
    position: absolute;
-   top: -70px; left: 13%;
+   top: -87px; left: 34%;
   }
 }
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+@media (min-width: 100px) and (max-width: 375px) {
   .home {
     position: relative;
     margin-bottom: 10vh;
@@ -49,13 +50,13 @@
      height: 117px;
      width: 135px;
      position: absolute;
-     top: -124px; left: 1%;
+     top: -82px; left: 1%;
     }
   }
 }
 
 // Medium device
-@media (min-width: 576px) and (max-width: 812px) {
+@media (min-width: 568px) and (max-width: 812px) {
   .home {
     display: block;
     text-align: center;
@@ -69,7 +70,7 @@
      height: 110px;
      width: 110px;
      position: absolute;
-     top: -70px; left: 0%;
+     top: -70px; left: 24%;
     }
   }
 }

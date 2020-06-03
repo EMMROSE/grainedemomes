@@ -5,7 +5,7 @@
       <% end %>
   <% else %>
     <div>
-      <h2 style="text-decoration: underline;"><%= "Mon panier :"%></h2><br>
+      <h2><%= "Mon panier"%></h2><br>
       <div class="cart-items">
         <% @line_items.each do |line_item| %>
           <div class="cart-item">
@@ -25,12 +25,12 @@
       </div>
       <div class="total-amount">
         <div style="display:flex; align-items: center;">
-          <h4>Frais de port: </h4>
-          <h4><%= (@cart.promotion) %></h4>
-        </div>
-        <div style="display:flex; align-items: center;">
           <h4>Total de ma commande: </h4>
           <h4>  <%= (@cart.sub_total) %> €</h4>
+        </div>
+        <div style="display:flex; align-items: center;">
+          <h6>Frais de port: </h6>
+          <h6><%= (@cart.promotion) %></h6>
         </div>
           <%= link_to new_order_path do %>
             <button class="btn-oval">Commander</button>
