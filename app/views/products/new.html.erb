@@ -3,50 +3,50 @@
  <%= simple_form_for(new_product) do |f| %>
    <div class="form-top">
     <div class="gift-choices">
-    <fieldset class="form-group required">
-      <input type="hidden" name="product[category_id][]" value="">
-      Choose your category?
+      <fieldset class="form-group required">
+        <input type="hidden" name="product[category_id][]" value="">
+        Choose your category?
 
-      <div>
-        <% Category.all.each do |category| %>
-          <input class="d-none required" type="radio" value="<%= category.id %>" name="product[category_id]" id="product_category_id_<%= category.id %>">
-          <label class="form-check-label-gift d-flex collection_radio_buttons gift-choice" for="product_category_id_<%= category.id %>">
-            <%= category.name %>
-          </label>
-        <% end %>
-      </div>
-    </fieldset>
+        <div>
+          <% Category.all.each do |category| %>
+            <input class="d-none required" type="radio" value="<%= category.id %>" name="product[category_id]" id="product_category_id_<%= category.id %>">
+            <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_category_id_<%= category.id %>">
+              <%= category.name %>
+            </label>
+          <% end %>
+        </div>
+      </fieldset>
     </div>
     <div class="gift-choices">
-        <fieldset class="form-group required">
-      <input type="hidden" name="product[size_id][]" value="">
-      Choose your size?
+      <fieldset class="form-group required">
+        <input type="hidden" name="product[size_id][]" value="">
+        Choose your size?
 
-      <div>
-        <% Size.all.each do |size| %>
-          <input class="d-none required" type="radio" value="<%= size.id %>" name="product[size_id]" id="product_size_id_<%= size.id %>">
-          <label class="form-check-label-gift d-flex collection_radio_buttons gift-choice" for="product_size_id_<%= size.id %>">
-            <%= size.name %>
-          </label>
-        <% end %>
-      </div>
-    </fieldset>
-  </div>
+        <div>
+          <% Size.all.each do |size| %>
+            <input class="d-none required" type="radio" value="<%= size.id %>" name="product[size_id]" id="product_size_id_<%= size.id %>">
+            <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_size_id_<%= size.id %>">
+              <%= size.name %>
+            </label>
+          <% end %>
+        </div>
+      </fieldset>
+    </div>
     <div class="gift-choices">
-        <fieldset class="form-group required">
+      <fieldset class="form-group required">
       <input type="hidden" name="product[genre_id][]" value="">
       Choose your genre?
 
       <div>
         <% Genre.all.each do |genre| %>
           <input class="d-none required" type="radio" value="<%= genre.id %>" name="product[genre_id]" id="product_genre_id_<%= genre.id %>">
-          <label class="form-check-label-gift d-flex collection_radio_buttons gift-choice" for="product_genre_id_<%= genre.id %>">
+          <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_genre_id_<%= genre.id %>">
             <%= genre.name %>
           </label>
         <% end %>
       </div>
-    </fieldset>
-  </div>
+      </fieldset>
+    </div>
     <%= f.input :name, label: 'Nom', placeholder: "Nom du produit" %>
     <p>Prix boutique</p>
     <%= f.number_field :old_price_cents, label: "Prix (en centimes)", placeholder: 0%>

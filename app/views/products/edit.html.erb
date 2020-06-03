@@ -1,9 +1,52 @@
 <div class="container form-container">
  <%= simple_form_for(@product) do |f| %>
    <div class="form-top">
-    <%= f.input :category, as: :radio_buttons, collection: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'], wrapper: :vertical_collection_inline %>
-    <%= f.input :genre, as: :radio_buttons, collection: ['g1', 'g2', 'g3'], wrapper: :vertical_collection_inline %>
-    <%= f.input :size, as: :radio_buttons, collection: ['s1', 's2', 's3', 's4', 's5', 's6'], wrapper: :vertical_collection_inline %>
+    <div class="gift-choices">
+      <fieldset class="form-group required">
+        <input type="hidden" name="product[category_id][]" value="">
+        Choose your category?
+
+        <div>
+          <% Category.all.each do |category| %>
+            <input class="d-none required" type="radio" value="<%= category.id %>" name="product[category_id]" id="product_category_id_<%= category.id %>">
+            <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_category_id_<%= category.id %>">
+              <%= category.name %>
+            </label>
+          <% end %>
+        </div>
+      </fieldset>
+    </div>
+    <div class="gift-choices">
+      <fieldset class="form-group required">
+        <input type="hidden" name="product[size_id][]" value="">
+        Choose your size?
+
+        <div>
+          <% Size.all.each do |size| %>
+            <input class="d-none required" type="radio" value="<%= size.id %>" name="product[size_id]" id="product_size_id_<%= size.id %>">
+            <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_size_id_<%= size.id %>">
+              <%= size.name %>
+            </label>
+          <% end %>
+        </div>
+      </fieldset>
+    </div>
+    <div class="gift-choices">
+      <fieldset class="form-group required">
+      <input type="hidden" name="product[genre_id][]" value="">
+      Choose your genre?
+
+      <div>
+        <% Genre.all.each do |genre| %>
+          <input class="d-none required" type="radio" value="<%= genre.id %>" name="product[genre_id]" id="product_genre_id_<%= genre.id %>">
+          <label class="form-check-label-gift collection_radio_buttons gift-choice" for="product_genre_id_<%= genre.id %>">
+            <%= genre.name %>
+          </label>
+        <% end %>
+      </div>
+      </fieldset>
+    </div>
+
     <%= f.input :name, label: 'Nom' %>
     <p>Prix en boutique</p>
     <%= f.number_field :old_price_cents, label: "Prix (en centimes)" %>

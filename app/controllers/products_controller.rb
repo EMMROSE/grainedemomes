@@ -40,16 +40,6 @@ class ProductsController < ApplicationController
         flash[:alert] = "Veuillez compléter le formulaire s'il vous plaît."
       end
     end
-    # def create
-    #   @product = Product.new(product_params)
-    #   if @product.save
-    #     flash.notice = "Thank you! you add successfully a new product."
-    #     redirect_to root_path
-    #   else
-    #     #flash.now[:error] = t('flash.work.error_html')
-    #     render :new
-    #   end
-    # end
 
     def edit
       @product = Product.find(params[:id])
