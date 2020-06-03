@@ -78,3 +78,21 @@
     a {max-width: 80%;}
   }
 }
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .product {
+    height: 300px;
+  }
+  .product-description {
+    width:45%;
+    h1 {font-size: 2rem;}
+  }
+  .price {
+    align-items: center;
+  }
+  .link {
+    a {color: $pink; font-size: 15px;}
+  }
+
+}

@@ -47,3 +47,14 @@
     width: 100%;
   }
 }
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .total-amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+  }
+}

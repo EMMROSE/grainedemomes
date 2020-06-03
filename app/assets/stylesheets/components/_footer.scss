@@ -38,6 +38,14 @@
       align-items: center;
       height: 80%;
       margin: 16px 0px 16px 0px;
+      a { margin: 8px;}
     }
+  }
+}
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .footer {
+    height: 26vh;
   }
 }

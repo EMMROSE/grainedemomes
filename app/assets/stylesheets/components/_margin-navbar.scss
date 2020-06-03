@@ -1,3 +1,10 @@
 .margin-navbar {
   height: 10vh;
 }
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .margin-navbar {
+    height: 20vh;
+  }
+}

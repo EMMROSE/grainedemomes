@@ -53,3 +53,23 @@
     }
   }
 }
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .home {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10vh;
+    h2 {
+      font-size: 40px;
+      color: $red;
+    }
+    img {
+     height: 110px;
+     width: 110px;
+     position: absolute;
+     top: -70px; left: 0%;
+    }
+  }
+}

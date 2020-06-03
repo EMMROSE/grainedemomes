@@ -180,3 +180,11 @@
     #eye {display: none;}
   }
 }
+
+// Medium device
+@media (min-width: 576px) and (max-width: 812px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+}
