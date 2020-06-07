@@ -9,8 +9,8 @@
         <h1><strong><%= @product.name %></strong></h1>
         <h5><%= @product.description %></h5>
         <h5>Taille: <%= @product.size.name %> mois</h5>
-        <!-- <h5>Prix Boutique: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5> -->
-        <h4>Prix exclusif: <%= @product.price%>€</h4>
+        <h5>Prix neuf: <span style="text-decoration: line-through;"><%= @product.old_price%></span>€</h5>
+        <h4>Prix Graine de Mômes: <%= @product.price%>€</h4>
       </div>
       <div class= "price">
         <%= link_to "Achetez", line_items_path(product_id: @product.id), method: :post, class: "btn-oval", id: "btn-product" %>
