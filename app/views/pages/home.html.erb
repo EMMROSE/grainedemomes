@@ -11,6 +11,7 @@
           <%= link_to product_path(product) do %>
             <span><%= cl_image_tag product.cover.key, class: "front-picture"%></span>
             <span><%= cl_image_tag product.photo.key, class: "back-picture"%></span>
+            <span class="size"><%= product.size.name %> mois</span>
           <% end %>
         </div>
         <div class="bottom">
