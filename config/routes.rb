@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'admin', to: 'pages#admin'
+  get 'mentions_legales', to: 'pages#mentions_legales'
 
   resources :products
     get 'products/:id/research', to: "products#research", as: "product_research"

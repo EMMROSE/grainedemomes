@@ -26,5 +26,16 @@ class PagesController < ApplicationController
     # Size filter
     @products = @products.where(size: params[:size]) if params[:size].present?
   end
-
+  def mentions_legales
+    @categories = Category.all
+    @genres = Genre.all
+    @sizes = Size.all
+    @products = Product.all
+    # Category filter
+    @products = @products.where(category: params[:category]) if params[:category].present?
+    # Genre filter
+    @products = @products.where(genre: params[:genre]) if params[:genre].present?
+    # Size filter
+    @products = @products.where(size: params[:size]) if params[:size].present?
+  end
 end
