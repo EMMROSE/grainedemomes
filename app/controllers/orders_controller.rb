@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:fullname, :email, :address, :zipcode, :city)
+    params.require(:order).permit(:fullname, :email, :address, :zipcode, :city, :cgv)
   end
 
   # def trigger_stripe

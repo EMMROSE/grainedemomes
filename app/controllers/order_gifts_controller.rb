@@ -46,7 +46,7 @@ class OrderGiftsController < ApplicationController
   private
 
   def order_gift_params
-    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest, :gift_id)
+    params.require(:order_gift).permit(:fullname, :email, :fullname_guest, :email_guest, :gift_id, :cgv)
   end
 
 
