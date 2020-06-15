@@ -53,6 +53,8 @@
     <br>
     <p>Prix Graîne de mômes</p>
     <%= f.number_field :price_cents, label: "Prix (en centimes)"%>
+    <p>Quantité disponible</p>
+    <%= f.number_field :stock %>
     <%= f.input :sku, label: 'Référence (SKU)' %>
     <%= f.input :description, label: 'Ajoutez une description', as: :text %>
     <div class="d-flex">

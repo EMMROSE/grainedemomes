@@ -84,7 +84,7 @@ puts "----------"
 puts "Create Products"
 puts "----------"
 
-p1 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00001", price_cents: 2900, old_price_cents: 5800, stock: 1})
+p1 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00001", price_cents: 2900, old_price_cents: 5800, stock: 0})
 p1.category = c6
 p1.genre = g2
 p1.size = s1
@@ -104,7 +104,7 @@ file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v15906888
 p2.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
 p2.save!
 
-p3 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00003", price_cents: 2900, old_price_cents: 5800, stock: 1})
+p3 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00003", price_cents: 2900, old_price_cents: 5800, stock: 0})
 p3.category = c6
 p3.genre = g2
 p3.size = s3

@@ -6,7 +6,7 @@
   </div>
   <div class="cards">
     <% @products.each do |product| %>
-      <%= if product.stock > 0 %>
+      <% if product.stock > 0 %>
         <div class="wrapper">
           <div class="top">
             <%= link_to product_path(product) do %>
@@ -45,7 +45,7 @@
             <div style="display:flex;">
               <h3><%= product.name %></h3>
               <!-- If quantity equal 0, Product cannot be added to a cart -->
-              <p id="available">Non disponible actuellement</p>
+              <p id="available">Victime de son succès</p>
             </div>
             <div style="display:flex;">
               <h5><%= product.price %>€</h5>
