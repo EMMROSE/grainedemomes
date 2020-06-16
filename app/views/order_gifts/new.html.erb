@@ -32,8 +32,8 @@
       <%= f.input :fullname_guest, label: false, placeholder: "Le nom du bénéficiaire" %>
       <%= f.input :email_guest, label: "Pour un envoi direct au bénéficiaire, merci de saisir son adress e-mail:", placeholder: "l'e-mail du bénéficiaire" %>
       <div class="field">
+          <%= f.check_box :cgv, {}, true %>
           <%= f.label "J'accepte les conditions générales de vente" %>
-          <%= f.check_box :cgv, {}, true %> <br />
       </div>
       <br>
       <%= f.submit 'Validez', class: 'btn-oval' %>
