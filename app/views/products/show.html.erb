@@ -13,7 +13,9 @@
         <h4>Prix Graine de Mômes: <%= @product.price%>€</h4>
       </div>
       <div class= "price">
-        <%= link_to "Achetez", line_items_path(product_id: @product.id), method: :post, class: "btn-oval", id: "btn-product" %>
+        <% if @product.stock > 0 %>
+          <%= link_to "Achetez", line_items_path(product_id: @product.id), method: :post, class: "btn-oval", id: "btn-product" %>
+        <% end %>
         <div class= "link">
           <%= link_to root_path do %>
             Retour à la Boutique

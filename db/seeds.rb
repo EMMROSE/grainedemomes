@@ -1,6 +1,7 @@
 require "open-uri"
 
 puts 'Create users'
+User.destroy_all
 @user1 = User.new(email: 'mboizet1@gmail.com', password:'Chocolataulait9!')
 @user1.save!
 puts '>>>>>> Done!'
@@ -490,4 +491,6 @@ p40.save!
 
 puts "-------"
 puts ">>>>>> #{Product.count} products created!"
+
+
 puts ">>>>>> Done! Seeds achieved"

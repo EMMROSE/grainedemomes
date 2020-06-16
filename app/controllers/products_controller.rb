@@ -6,8 +6,8 @@ class ProductsController < ApplicationController
       @products = @products.where(category: params[:category]) if params[:category].present?
       # Genre filter
       @products = @products.where(genre: params[:genre]) if params[:genre].present?
-      # Size filter
-      @products = @products.where(size: params[:size]) if params[:size].present?
+      # # Size filter
+      @products = @products.article.where(size: params[:size]) if params[:size].present?
 
       @products = Product.all
     end
@@ -62,7 +62,7 @@ class ProductsController < ApplicationController
     private
 
     def product_params
-      params.require(:product).permit(:name, :description, :genre_id, :category_id, :size_id, :sku, :cover, :photo, :price_cents, :old_price_cents, :stock)
+      params.require(:product).permit(:name, :description, :genre_id, :category_id, :sku, :cover, :photo, :price_cents, :old_price_cents, :stock)
     end
-    # Ne pas oublier de remettre photos: [] dans les params
+    # Ne pas oublier de remettre photos: [] dans les params et :size_id (enlever pour article)
 end

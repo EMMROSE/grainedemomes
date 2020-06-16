@@ -5,7 +5,7 @@
     <ul class="list-unstyled">
       <li><strong>Article(s): </strong></li>
       <% @order.line_items.each do |item| %>
-        <li style="padding-left: 16px;"><%= item.product.name %> - <%= item.product.size.name %></li>
+        <li style="padding-left: 16px;"><%= item.product.name %> - <%= item.product.size.name %> mois</li>
       <% end %>
     </ul>
     <div id="btn-regler">

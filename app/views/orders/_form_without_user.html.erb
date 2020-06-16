@@ -2,12 +2,17 @@
   <%= simple_form_for @order do |f| %>
     <%= f.input :fullname, label: false, placeholder: 'votre nom et prénom' %>
     <%= f.input :email, label: false, placeholder: 'votre e-mail' %>
+    <%= f.input :phone, label: false, placeholder: 'votre n° de téléphone' %>
     <%= f.input :address, label: false, placeholder: 'adresse' %>
     <%= f.input :zipcode, label: false, placeholder: 'code postal' %>
     <%= f.input :city, label: false, placeholder: 'ville' %>
-    <div class="form-group form-check">
+<!--     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="cgv">
         <label class="form-check-label" for="cgv">J'accepte les conditions générales de vente</label>
+    </div> -->
+    <div class="field">
+        <%= f.check_box :cgv, {}, true %>
+        <%= f.label "J'accepte les conditions générales de vente" %>
     </div>
    <div>
     <div>

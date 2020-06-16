@@ -3,6 +3,7 @@ class CreateOrderGifts < ActiveRecord::Migration[6.0]
     create_table :order_gifts do |t|
       t.string :state
       t.string :email
+      t.string :phone
       t.string :fullname
       t.string :email_guest
       t.string :fullname_guest

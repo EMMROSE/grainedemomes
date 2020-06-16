@@ -4,6 +4,8 @@ class Order < ApplicationRecord
   has_many :products, through: :line_items
 
   validates :email, presence: true
+  validates :phone, presence: true
+  validates :cgv, presence: true
   monetize :amount_cents
   monetize :shipping_cents
   monetize :sub_total_cents

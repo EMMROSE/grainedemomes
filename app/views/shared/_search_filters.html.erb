@@ -63,7 +63,7 @@
         <!-- FILTER BY SIZE -->
         <% if params[:size] %>
           <%= link_to root_path(request.query_parameters.except(:size)), class: "btn filter filter-selected" do %>
-            <%= @products.find_by(size: params[:size]).size.name %>mois <i class="fas fa-times"></i>
+            <%= @products.find_by(size: params[:size]).size.name %> mois <i class="fas fa-times"></i>
           <% end %>
         <% else %>
           <div class="filter activity-filters dropdown">

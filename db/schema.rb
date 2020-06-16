@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
   create_table "order_gifts", force: :cascade do |t|
     t.string "state"
     t.string "email"
+    t.string "phone"
     t.string "fullname"
     t.string "email_guest"
     t.string "fullname_guest"
@@ -96,6 +97,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
   create_table "orders", force: :cascade do |t|
     t.string "state"
     t.string "email"
+    t.string "phone"
     t.string "fullname"
     t.string "address"
     t.string "zipcode"

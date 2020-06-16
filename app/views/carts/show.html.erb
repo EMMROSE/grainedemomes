@@ -11,7 +11,8 @@
           <div class="cart-item">
             <div class="cart-item-left">
               <%= cl_image_tag line_item.product.cover.key%>
-              <%= line_item.product.name %>
+                <%= line_item.product.name %> <br>
+                <%= line_item.product.size.name %> mois
             </div>
             <div class="cart-item-right">
               <p><%= line_item.product.price %> €</p>
@@ -25,11 +26,11 @@
       </div>
       <div class="total-amount">
         <div style="display:flex; align-items: center;">
-          <h4>Total de ma commande: </h4>
+          <h4>Total de ma commande: &nbsp;</h4>
           <h4>  <%= (@cart.sub_total) %> €</h4>
         </div>
         <div style="display:flex; align-items: center;">
-          <h6>Frais de port: </h6>
+          <h6>Frais de port: &nbsp;</h6>
           <h6><%= (@cart.promotion) %></h6>
         </div>
           <%= link_to new_order_path do %>
