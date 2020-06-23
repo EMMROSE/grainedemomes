@@ -179,6 +179,9 @@
       position: absolute;
       bottom: 0px; right: 40px;
     }
+     #available {
+      bottom: 200%; right: 0%;
+    }
     a {
       color: grey;
       &:hover {color: grey; text-decoration: none;}
@@ -208,7 +211,7 @@
 }
 
 // Medium device
-@media (min-width: 576px) and (max-width: 812px) {
+@media (min-width: 576px) and (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr 1fr;
     grid-gap: 8px;

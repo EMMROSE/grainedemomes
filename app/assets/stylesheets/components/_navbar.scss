@@ -17,7 +17,7 @@
     a {
       color: $pink;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 18px;
       margin-right: 16px;
     &:hover {text-decoration: none;}
     img {
@@ -63,7 +63,25 @@
   }
 }
 // Smallest device
-@media (min-width: 100px) and (max-width: 375px) {
+@media (min-width: 100px) and (max-width: 374px) {
+  .navbar-lewagon {
+    height: 21vh;
+    position: sticky;
+    top: 64px;
+    .nav-items {
+      width: 100%;
+      a {
+        font-size: 9px;
+        margin-right: 6px;
+        img {
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+// Smallest device
+@media (min-width: 375px) and (max-width: 414px) {
   .navbar-lewagon {
     height: 17vh;
     position: sticky;
@@ -71,7 +89,7 @@
     .nav-items {
       width: 100%;
       a {
-        font-size: 12px;
+        font-size: 11px;
         margin-right: 6px;
         img {
           width: 70px;
@@ -100,7 +118,7 @@
 }
 
 // Medium device
-@media (min-width: 568px) and (max-width: 812px) {
+@media (min-width: 415px) and (max-width: 900px) {
   .navbar-lewagon {
     height: 30vh;
     position: sticky;
@@ -108,8 +126,8 @@
     .nav-items {
       width: 100%;
       a {
-        font-size: 18px;
-        margin-right: 35px;
+        font-size: 16px;
+        margin-right: 24px;
         img {
           width: 80px;
         }
@@ -119,7 +137,7 @@
 
   .cart {
     position: absolute;
-    top: -4px; right: -8px;
+    top: -4px; right: 0px;
     p {
       font: 12px;
       width: 18px;
