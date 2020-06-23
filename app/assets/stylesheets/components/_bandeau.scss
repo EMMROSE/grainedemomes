@@ -18,10 +18,11 @@
   .bandeau {
     position: sticky;
     top: 0px;
-    height: 48px;
+    height: 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {margin-bottom: 0.5rem;}
   }
 }

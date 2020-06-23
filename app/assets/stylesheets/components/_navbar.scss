@@ -66,6 +66,8 @@
 @media (min-width: 100px) and (max-width: 375px) {
   .navbar-lewagon {
     height: 17vh;
+    position: sticky;
+    top: 64px;
     .nav-items {
       width: 100%;
       a {
@@ -101,6 +103,8 @@
 @media (min-width: 568px) and (max-width: 812px) {
   .navbar-lewagon {
     height: 30vh;
+    position: sticky;
+    top: 64px;
     .nav-items {
       width: 100%;
       a {
