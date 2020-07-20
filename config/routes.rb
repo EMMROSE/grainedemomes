@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   post 'without_login', to: 'orders#without_login'
   post 'without_login', to: 'order_gifts#without_login'
   # resources :contacts, only: [:new, :create]
+  resources :promotions
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

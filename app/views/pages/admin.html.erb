@@ -22,7 +22,22 @@
         <% end %>
       </div>
     </div>
-
+  <h1>Les Promotions en cours</h1>
+    <div>
+      <% if Promotion.count > 0 %>
+        <% @promotions = Promotion.all %>
+        <% @promotions.each do |promotion| %>
+          <p>code promo: <%= promotion.code %> // réduction de <%= promotion.reduction %></p>
+          <%= link_to promotion_path(promotion), method: :delete, class: "py-2 px-4 ml-2 bd-highlight bg-light rounded",data: { confirm: "Etes vous sûre ?" } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        <% end %>
+      <% else %>
+        <p>Aucune promotion actuellement</p>
+      <% end %>
+    </div>
+    <br>
+    <a href="<%=new_promotion_path%>" class="btn btn-primary">Nouveau code promo</a>
   </div>
 
 </div>

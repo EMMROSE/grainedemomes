@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_10_134632) do
+ActiveRecord::Schema.define(version: 2020_07_19_123150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
     t.string "address"
     t.string "zipcode"
     t.string "city"
+    t.string "codepromo"
     t.boolean "cgv"
     t.string "checkout_session_id"
     t.integer "amount_cents", default: 0, null: false
@@ -135,6 +136,13 @@ ActiveRecord::Schema.define(version: 2020_05_10_134632) do
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["genre_id"], name: "index_products_on_genre_id"
     t.index ["size_id"], name: "index_products_on_size_id"
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.string "code"
+    t.float "reduction"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sizes", force: :cascade do |t|

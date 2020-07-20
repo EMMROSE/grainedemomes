@@ -15,6 +15,11 @@ class Order < ApplicationRecord
   end
 
   def amount_cents
-    return sub_total_cents + shipping_cents
+    if Promotion.find { |l| l.code == codepromo }
+      reduction = Promotion.where(code: codepromo).pluck(:reduction)
+      return (reduction.first*sub_total_cents + shipping_cents).to_i
+    else
+      return sub_total_cents + shipping_cents
+    end
   end
 end
