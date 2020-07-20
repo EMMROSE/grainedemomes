@@ -102,7 +102,6 @@ ActiveRecord::Schema.define(version: 2020_07_19_123150) do
     t.string "address"
     t.string "zipcode"
     t.string "city"
-    t.string "codepromo"
     t.boolean "cgv"
     t.string "checkout_session_id"
     t.integer "amount_cents", default: 0, null: false

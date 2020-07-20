@@ -8,7 +8,6 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :address
       t.string :zipcode
       t.string :city
-      t.string :codepromo
       t.boolean :cgv
       t.string :checkout_session_id
       t.monetize :amount
