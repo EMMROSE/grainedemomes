@@ -3,8 +3,8 @@
   <%= simple_form_for(new_promotion) do |f| %>
     <div class="form-top">
       <div class="gift-choices">
-        <%= f.input :code, label: 'Nom du code promo', placeholder: "Nom du code promotion" %>
-        <%= f.number_field :reduction, step: 0.05, label: "coefficient de réduction => exemple pour 90% = 0.9", placeholder: 0%>
+        <%= f.input :code, label: 'Nom du code promo (obligatoirement en minuscule)', placeholder: "Nom du code promotion" %>
+        <%= f.number_field :reduction, step: 0.05, label: "coefficient de réduction =>exemple pour 90% = 0.9", placeholder: 0.9%>
         <br>
       </div>
       <div class="form-button">
