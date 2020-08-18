@@ -22,8 +22,6 @@ class OrderGiftsController < ApplicationController
         cancel_url: order_gift_url(@order_gift)
       )
       @order_gift.update(checkout_session_id: session.id)
-      GiftMailer.confirmation(@order_gift).deliver_now
-      GiftMailer.information(@order_gift).deliver_now
       redirect_to new_order_gift_payment_gift_path(@order_gift)
     else
       render :new
@@ -33,8 +31,12 @@ class OrderGiftsController < ApplicationController
   def show
     if current_user
       @order_gift = current_user.order_gifts.find(params[:id])
+      GiftMailer.confirmation(@order_gift).deliver_now
+      GiftMailer.information(@order_gift).deliver_now
     else
       @order_gift = OrderGift.find(params[:id])
+      GiftMailer.confirmation(@order_gift).deliver_now
+      GiftMailer.information(@order_gift).deliver_now
     end
   end
 
