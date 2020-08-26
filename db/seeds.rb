@@ -85,117 +85,117 @@ puts "----------"
 puts "Create Products"
 puts "----------"
 
-p1 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00001", price_cents: 2900, old_price_cents: 5800, stock: 0})
-p1.category = c6
-p1.genre = g2
-p1.size = s1
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
-p1.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
-p1.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
-p1.save!
+# p1 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00001", price_cents: 2900, old_price_cents: 5800, stock: 0})
+# p1.category = c6
+# p1.genre = g2
+# p1.size = s1
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
+# p1.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
+# p1.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
+# p1.save!
 
-p2 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00002", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p2.category = c6
-p2.genre = g2
-p2.size = s2
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
-p2.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
-p2.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
-p2.save!
+# p2 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00002", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p2.category = c6
+# p2.genre = g2
+# p2.size = s2
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
+# p2.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
+# p2.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
+# p2.save!
 
-p3 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00003", price_cents: 2900, old_price_cents: 5800, stock: 0})
-p3.category = c6
-p3.genre = g2
-p3.size = s3
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
-p3.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
-p3.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
-p3.save!
+# p3 = Product.create({:name=>"Robe bébé Eat me", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00003", price_cents: 2900, old_price_cents: 5800, stock: 0})
+# p3.category = c6
+# p3.genre = g2
+# p3.size = s3
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
+# p3.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
+# p3.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
+# p3.save!
 
-p4 = Product.create({:name=>"Robe bébé Eat me", :description=>"50%` coton 50%` polyester ", :sku=>"00004", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p4.category = c6
-p4.genre = g2
-p4.size = s4
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
-p4.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
-p4.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
-p4.save!
+# p4 = Product.create({:name=>"Robe bébé Eat me", :description=>"50%` coton 50%` polyester ", :sku=>"00004", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p4.category = c6
+# p4.genre = g2
+# p4.size = s4
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590692731/robe-eat-me-blune-removebg-preview_hwgay6.png')
+# p4.cover.attach(io: file, filename: 'robe-eat-me-blune-removebg-preview_hwgay6.png', content_type: 'image/png')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590688819/robe_eat_me.jpg')
+# p4.photo.attach(io: file, filename: 'robe_eat_me.jpg', content_type: 'image/jpg')
+# p4.save!
 
-p5 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00005", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p5.category = c6
-p5.genre = g2
-p5.size = s1
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
-p5.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
-p5.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
-p5.save!
+# p5 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester", :sku=>"00005", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p5.category = c6
+# p5.genre = g2
+# p5.size = s1
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
+# p5.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
+# p5.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
+# p5.save!
 
-p6 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00006", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p6.category = c6
-p6.genre = g2
-p6.size = s2
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
-p6.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
-p6.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
-p6.save!
+# p6 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00006", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p6.category = c6
+# p6.genre = g2
+# p6.size = s2
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
+# p6.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
+# p6.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
+# p6.save!
 
-p7 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00007", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p7.category = c6
-p7.genre = g2
-p7.size = s3
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
-p7.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
-p7.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
-p7.save!
+# p7 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00007", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p7.category = c6
+# p7.genre = g2
+# p7.size = s3
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
+# p7.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
+# p7.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
+# p7.save!
 
-p8 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00008", price_cents: 2900, old_price_cents: 5800, stock: 1})
-p8.category = c6
-p8.genre = g2
-p8.size = s4
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
-p8.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
-p8.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
-p8.save!
+# p8 = Product.create({:name=>"Robe bébé Baby doll", :description=>"50#{"%"} coton 50#{"%"} polyester ", :sku=>"00008", price_cents: 2900, old_price_cents: 5800, stock: 1})
+# p8.category = c6
+# p8.genre = g2
+# p8.size = s4
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_hikieo.jpg')
+# p8.cover.attach(io: file, filename: 'robe-bebe-baby-doll_hikieo.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590695132/robe-bebe-baby-doll_1_m01yzz.jpg')
+# p8.photo.attach(io: file, filename: 'robe-bebe-baby-doll_1_m01yzz.jpg', content_type: 'image/jpg')
+# p8.save!
 
-p9 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=>"100#{"%"} coton biologique", :sku=>"00009", price_cents: 1800, old_price_cents: 3600, stock: 1})
-p9.category = c3
-p9.genre = g3
-p9.size = s2
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689384/171220-112017_1000x1000_jpg_amfcju.jpg')
-p9.cover.attach(io: file, filename: '171220-112017_1000x1000_jpg_amfcju.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689054/sarouel-baboush-bleu-petrole_7_m3iouv.jpg')
-p9.photo.attach(io: file, filename: 'sarouel-baboush-bleu-petrole_7_m3iouv.jpg', content_type: 'image/jpg')
-p9.save!
+# p9 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=>"100#{"%"} coton biologique", :sku=>"00009", price_cents: 1800, old_price_cents: 3600, stock: 1})
+# p9.category = c3
+# p9.genre = g3
+# p9.size = s2
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689384/171220-112017_1000x1000_jpg_amfcju.jpg')
+# p9.cover.attach(io: file, filename: '171220-112017_1000x1000_jpg_amfcju.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689054/sarouel-baboush-bleu-petrole_7_m3iouv.jpg')
+# p9.photo.attach(io: file, filename: 'sarouel-baboush-bleu-petrole_7_m3iouv.jpg', content_type: 'image/jpg')
+# p9.save!
 
-p10 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=> "100#{"%"} coton biologique ", :sku=>"00010", price_cents: 1800, old_price_cents: 3600, stock: 1})
-p10.category = c3
-p10.genre = g3
-p10.size = s3
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689402/pantalon_polaire_moutarde.jpg')
-p10.cover.attach(io: file, filename: 'pantalon_polaire_moutarde.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689481/sarouel-baboush-moutarde_5_drmfb3.jpg')
-p10.photo.attach(io: file, filename: 'sarouel-baboush-moutarde_5_drmfb3.jpg', content_type: 'image/jpg')
-p10.save!
+# p10 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=> "100#{"%"} coton biologique ", :sku=>"00010", price_cents: 1800, old_price_cents: 3600, stock: 1})
+# p10.category = c3
+# p10.genre = g3
+# p10.size = s3
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689402/pantalon_polaire_moutarde.jpg')
+# p10.cover.attach(io: file, filename: 'pantalon_polaire_moutarde.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689481/sarouel-baboush-moutarde_5_drmfb3.jpg')
+# p10.photo.attach(io: file, filename: 'sarouel-baboush-moutarde_5_drmfb3.jpg', content_type: 'image/jpg')
+# p10.save!
 
-p11 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=>"100'%'' coton biologique ", :sku=>"00011", price_cents: 1800, old_price_cents: 3600, stock: 1})
-p11.category = c3
-p11.genre = g3
-p11.size = s2
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689384/171220-112017_1000x1000_jpg_amfcju.jpg')
-p11.cover.attach(io: file, filename: '171220-112017_1000x1000_jpg_amfcju.jpg', content_type: 'image/jpg')
-file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689054/sarouel-baboush-bleu-petrole_7_m3iouv.jpg')
-p11.photo.attach(io: file, filename: 'sarouel-baboush-bleu-petrole_7_m3iouv.jpg', content_type: 'image/jpg')
-p11.save!
+# p11 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=>"100'%'' coton biologique ", :sku=>"00011", price_cents: 1800, old_price_cents: 3600, stock: 1})
+# p11.category = c3
+# p11.genre = g3
+# p11.size = s2
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689384/171220-112017_1000x1000_jpg_amfcju.jpg')
+# p11.cover.attach(io: file, filename: '171220-112017_1000x1000_jpg_amfcju.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/grainedemomes/image/upload/v1590689054/sarouel-baboush-bleu-petrole_7_m3iouv.jpg')
+# p11.photo.attach(io: file, filename: 'sarouel-baboush-bleu-petrole_7_m3iouv.jpg', content_type: 'image/jpg')
+# p11.save!
 
-puts "------10%-------"
+# puts "------10%-------"
 
 # p12 = Product.create({:name=>"Pantalon en coton polaire biologique", :description=>"100#{"%"} coton biologique ", :sku=>"00012", price_cents: 1800, old_price_cents: 3600, stock: 1})
 # p12.category = c3
